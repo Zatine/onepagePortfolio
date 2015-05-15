@@ -1,0 +1,62 @@
+$max_row_width: 1400;
+$row_width: 100;
+$column_amount: 12;
+$column_margin: 1;
+$column_width: ($row_width - ($column_amount * $column_margin)) / $column_amount;
+
+@function width_calc($column){
+  @return unquote(($column * $column_width) + ($column_margin * ($column - 1)) + "%");
+}
+
+.container {
+  max-width: unquote($max_row_width + "px");
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 auto;
+}
+
+@media(min-width: 500px){
+  .row{
+    width: unquote($row_width + "%");
+
+    .column, .columns{
+      float:left;
+      margin-right: unquote($column_margin + "%");
+		
+	  img{
+		  max-width: 100%;
+		  height: auto;
+	  }
+		
+      &:last-child{
+        float:right;
+      }
+      &:first-child{
+        float: left;
+      }
+    }
+
+    .one    {width: width_calc(1);}
+    .two    {width: width_calc(2);}
+    .three  {width: width_calc(3);}
+    .four   {width: width_calc(4);}
+    .five   {width: width_calc(5);}
+    .six    {width: width_calc(6);}
+    .seven  {width: width_calc(7);}
+    .eight  {width: width_calc(8);}
+    .nine   {width: width_calc(9);}
+    .ten    {width: width_calc(10);}
+    .eleven {width: width_calc(11);}
+    .twelve {width: width_calc(12);}
+  }
+
+
+  .row:after,
+  .container:after{
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
