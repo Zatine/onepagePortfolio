@@ -12,13 +12,13 @@ html{
 
 body{
 	font-family: $text-font;
-	font-size: 18px;
+	font-size: 22px;
 	color: #1a1a1a;
 	background: #E6E6E6;
 	height: 100%;
 }
 
-h2, h3, h4, h5, h6{
+h2, h3{
 	font-weight: normal;
 }
 
@@ -35,6 +35,20 @@ a, a:active, a:visited{
 			opacity: 0.7;
 		}
 	}
+}
+
+.sub-title{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.pink{
+  color: $pink;
+}
+.blue{
+  color: $blue;
+}
+.quicksilver{
+  font-family: $text-font;
 }
 
 .bottom{
@@ -104,10 +118,49 @@ main{
 		margin: 0;}
 	
 	section{padding: 50px 0;}
-	
+
+  	#about{
+	  h4{font-size: 2.4rem; font-weight:bold; margin-top:50px;}
+
+	  .skills{
+		h4{
+		  height: 40px;
+		}
+		text-align: center;
+		.skill-icons{
+		  background-image: url('../img/skill_icons.png');
+		  height: 135px;
+		  width:135px;
+		  margin: 0 auto;
+		}
+		#art-icon{background-position: 0 0;}
+		#code-icon{background-position: 270px 0;}
+		#other-icon{background-position: 135px 0;}
+	  }
+
+	  ul{
+		font-size: 2rem;
+		text-align: left;
+		list-style: none;
+		padding: 0;
+		max-width: 375px;
+		margin: 50px auto;
+		li{overflow: hidden; height:40px;}
+
+		.pink-skill, .blue-skill{display:inline-block; float:right; height: 90%;}
+		.pink-skill{background-color:$pink;}
+		.blue-skill{background-color:$blue;}
+		.level1{width:30px;}
+		.level2{width:60px;}
+		.level3{width:90px;}
+		.level4{width:120px;}
+		.level5{width:150px;}
+	  }
+	}
+
 	#projects{
 		background: #aaaaaa;
-		
+
 		.project{
 			margin-top: 50px;
 		}

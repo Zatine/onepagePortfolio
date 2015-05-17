@@ -361,7 +361,7 @@ th {
   margin: 0 auto; }
 
 .row {
-  margin: 0 auto; }
+  margin: 50px auto; }
 
 @media (min-width: 500px) {
   .row {
@@ -414,12 +414,12 @@ html {
 
 body {
   font-family: "Quicksand", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   color: #1a1a1a;
   background: #E6E6E6;
   height: 100%; }
 
-h2, h3, h4, h5, h6 {
+h2, h3 {
   font-weight: normal; }
 
 a, a:active, a:visited {
@@ -432,6 +432,19 @@ a, a:active, a:visited {
     -webkit-transition: opacity 1s; }
     a img:hover, a:active img:hover, a:visited img:hover {
       opacity: 0.7; }
+
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 600; }
+
+.pink {
+  color: #eb386f; }
+
+.blue {
+  color: #5cbfdf; }
+
+.quicksilver {
+  font-family: "Quicksand", sans-serif; }
 
 .bottom {
   position: absolute;
@@ -491,6 +504,53 @@ main h4 {
   margin: 0; }
 main section {
   padding: 50px 0; }
+main #about h4 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-top: 50px; }
+main #about .skills {
+  text-align: center; }
+  main #about .skills h4 {
+    height: 40px; }
+  main #about .skills .skill-icons {
+    background-image: url("../img/skill_icons.png");
+    height: 135px;
+    width: 135px;
+    margin: 0 auto; }
+  main #about .skills #art-icon {
+    background-position: 0 0; }
+  main #about .skills #code-icon {
+    background-position: 270px 0; }
+  main #about .skills #other-icon {
+    background-position: 135px 0; }
+main #about ul {
+  font-size: 2rem;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  max-width: 375px;
+  margin: 50px auto; }
+  main #about ul li {
+    overflow: hidden;
+    height: 40px; }
+  main #about ul .pink-skill, main #about ul .blue-skill {
+    display: inline-block;
+    float: right;
+    height: 90%; }
+  main #about ul .pink-skill {
+    background-color: #eb386f; }
+  main #about ul .blue-skill {
+    background-color: #5cbfdf; }
+  main #about ul .level1 {
+    width: 30px; }
+  main #about ul .level2 {
+    width: 60px; }
+  main #about ul .level3 {
+    width: 90px; }
+  main #about ul .level4 {
+    width: 120px; }
+  main #about ul .level5 {
+    width: 150px; }
 main #projects {
   background: #aaaaaa; }
   main #projects .project {

@@ -14,7 +14,7 @@ $column_width: ($row_width - ($column_amount * $column_margin)) / $column_amount
 }
 
 .row {
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 @media(min-width: 500px){
