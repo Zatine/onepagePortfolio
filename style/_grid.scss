@@ -17,7 +17,7 @@ $column_width: ($row_width - ($column_amount * $column_margin)) / $column_amount
   margin: 50px auto;
 }
 
-@media(min-width: 500px){
+@media(min-width: 600px){
   .row{
     width: unquote($row_width + "%");
 
@@ -25,10 +25,8 @@ $column_width: ($row_width - ($column_amount * $column_margin)) / $column_amount
       float:left;
       margin-right: unquote($column_margin + "%");
 		
-	  img{
-		  max-width: 100%;
-		  height: auto;
-	  }
+	  img{max-width: 100%;  height: auto;}
+	  a img{max-width: 100%;  height: auto;}
 		
       &:last-child{
         float:right;
@@ -37,7 +35,7 @@ $column_width: ($row_width - ($column_amount * $column_margin)) / $column_amount
         float: left;
       }
     }
-
+	.half 	{width: width_clac(0.5);}
     .one    {width: width_calc(1);}
     .two    {width: width_calc(2);}
     .three  {width: width_calc(3);}

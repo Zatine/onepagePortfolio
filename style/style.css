@@ -363,7 +363,7 @@ th {
 .row {
   margin: 50px auto; }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .row {
     width: 100%; }
     .row .column, .row .columns {
@@ -372,10 +372,15 @@ th {
       .row .column img, .row .columns img {
         max-width: 100%;
         height: auto; }
+      .row .column a img, .row .columns a img {
+        max-width: 100%;
+        height: auto; }
       .row .column:last-child, .row .columns:last-child {
         float: right; }
       .row .column:first-child, .row .columns:first-child {
         float: left; }
+    .row .half {
+      width: width_clac(0.5); }
     .row .one {
       width: 7.33333%; }
     .row .two {
@@ -432,6 +437,38 @@ a, a:active, a:visited {
     -webkit-transition: opacity 1s; }
     a img:hover, a:active img:hover, a:visited img:hover {
       opacity: 0.7; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.left-align {
+  text-align: left; }
+
+.right-align {
+  text-align: right; }
+
+.center-align {
+  text-align: center; }
+
+.clear {
+  content: "";
+  display: table;
+  clear: both; }
+
+.hidden {
+  display: none; }
+
+.show-block {
+  display: block; }
+
+.show-ib {
+  display: inline-block; }
+
+.show-inline {
+  display: inline; }
 
 .sub-title {
   font-size: 1.5rem;
@@ -523,38 +560,106 @@ main #about .skills {
     background-position: 270px 0; }
   main #about .skills #other-icon {
     background-position: 135px 0; }
-main #about ul {
-  font-size: 2rem;
-  text-align: left;
+  main #about .skills ul {
+    font-size: 2rem;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    max-width: 375px;
+    margin: 50px auto; }
+    main #about .skills ul li {
+      overflow: hidden;
+      height: 40px; }
+      main #about .skills ul li:hover {
+        opacity: 0.7; }
+    main #about .skills ul .pink-skill, main #about .skills ul .blue-skill {
+      display: inline-block;
+      float: right;
+      height: 90%;
+      text-indent: -999rem; }
+    main #about .skills ul .pink-skill {
+      background-color: #eb386f; }
+    main #about .skills ul .blue-skill {
+      background-color: #5cbfdf; }
+    main #about .skills ul .level1 {
+      width: 10%; }
+    main #about .skills ul .level2 {
+      width: 20%; }
+    main #about .skills ul .level3 {
+      width: 30%; }
+    main #about .skills ul .level4 {
+      width: 40%; }
+    main #about .skills ul .level5 {
+      width: 50%; }
+main #about .experience h4 {
+  margin-top: 0; }
+main #about .experience h5 {
+  font-size: 1.5rem;
+  display: inline;
+  padding: 0px 10px;
+  margin: 20px 0 0 0; }
+main #about .experience ul {
   list-style: none;
-  padding: 0;
-  max-width: 375px;
-  margin: 50px auto; }
-  main #about ul li {
-    overflow: hidden;
-    height: 40px; }
-  main #about ul .pink-skill, main #about ul .blue-skill {
-    display: inline-block;
-    float: right;
-    height: 90%; }
-  main #about ul .pink-skill {
-    background-color: #eb386f; }
-  main #about ul .blue-skill {
-    background-color: #5cbfdf; }
-  main #about ul .level1 {
-    width: 30px; }
-  main #about ul .level2 {
-    width: 60px; }
-  main #about ul .level3 {
-    width: 90px; }
-  main #about ul .level4 {
-    width: 120px; }
-  main #about ul .level5 {
-    width: 150px; }
+  padding: 0; }
+  main #about .experience ul li {
+    cursor: pointer;
+    cursor: hand;
+    width: 85%;
+    margin: 0 auto;
+    background: #cdcdcd; }
+    main #about .experience ul li:nth-child(even) {
+      background: #E6E6E6; }
+    main #about .experience ul li p {
+      margin: 20px 0 0 0;
+      padding: 0 10px; }
+    main #about .experience ul li:hover .seeMoreButton {
+      opacity: 1; }
+    main #about .experience ul li .seeMoreButton {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      color: #9a9a9a;
+      opacity: 0;
+      transition: opacity 200ms; }
+    main #about .experience ul li .seeMore {
+      background: #E6E6E6;
+      color: #1a1a1a;
+      transition: max-height 1s;
+      text-align: left;
+      margin: 0;
+      overflow: hidden; }
+    main #about .experience ul li .hide {
+      max-height: 0; }
+    main #about .experience ul li .show {
+      max-height: 200px;
+      height: auto; }
 main #projects {
   background: #aaaaaa; }
+  main #projects .row {
+    margin: 0 auto; }
+  main #projects .projects {
+    position: relative;
+    margin: 0; }
   main #projects .project {
-    margin-top: 50px; }
+    height: 450px;
+    display: inline-block;
+    float: left;
+    position: relative; }
+    main #projects .project .column, main #projects .project .columns {
+      position: relative;
+      height: 100%; }
+    main #projects .project .arrow {
+      position: relative;
+      cursor: pointer;
+      cursor: hand;
+      top: 50%;
+      background-image: url("../img/arrow.png");
+      height: 60px;
+      width: 30px; }
+      main #projects .project .arrow:hover {
+        opacity: 0.8; }
+    main #projects .project .next {
+      background-position: 30px; }
 
 footer {
   text-align: center; }

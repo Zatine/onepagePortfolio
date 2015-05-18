@@ -13,8 +13,8 @@ html{
 body{
 	font-family: $text-font;
 	font-size: 22px;
-	color: #1a1a1a;
-	background: #E6E6E6;
+	color: $text-color;
+	background: $bg-color;
 	height: 100%;
 }
 
@@ -36,6 +36,21 @@ a, a:active, a:visited{
 		}
 	}
 }
+
+.left{float:left;}
+.right{float:right;}
+.left-align{text-align:left;}
+.right-align{text-align:right;}
+.center-align{text-align:center;}
+.clear{content:"";
+	   display:table;
+	   clear:both;}
+
+.hidden{display: none;}
+.show-block{display: block;}
+.show-ib{display:inline-block;}
+.show-inline{display:inline;}
+	
 
 .sub-title{
   font-size: 1.5rem;
@@ -95,6 +110,7 @@ header{
 				padding: 0 20px;
 				display: inline-block;
 				
+				
 				a, a:active, a:visited{
 					transition: color 500ms;
 					-webkit-transition: color 300ms;
@@ -123,46 +139,141 @@ main{
 	  h4{font-size: 2.4rem; font-weight:bold; margin-top:50px;}
 
 	  .skills{
-		h4{
-		  height: 40px;
-		}
-		text-align: center;
-		.skill-icons{
-		  background-image: url('../img/skill_icons.png');
-		  height: 135px;
-		  width:135px;
-		  margin: 0 auto;
-		}
-		#art-icon{background-position: 0 0;}
-		#code-icon{background-position: 270px 0;}
-		#other-icon{background-position: 135px 0;}
-	  }
+			h4{
+			  height: 40px;
+			}
+			text-align: center;
+			.skill-icons{
+			  background-image: url('../img/skill_icons.png');
+			  height: 135px;
+			  width:135px;
+			  margin: 0 auto;
+			}
+			#art-icon{background-position: 0 0;}
+			#code-icon{background-position: 270px 0;}
+			#other-icon{background-position: 135px 0;}
 
-	  ul{
-		font-size: 2rem;
-		text-align: left;
-		list-style: none;
-		padding: 0;
-		max-width: 375px;
-		margin: 50px auto;
-		li{overflow: hidden; height:40px;}
+			  ul{
+			font-size: 2rem;
+			text-align: left;
+			list-style: none;
+			padding: 0;
+			max-width: 375px;
+			margin: 50px auto;
 
-		.pink-skill, .blue-skill{display:inline-block; float:right; height: 90%;}
-		.pink-skill{background-color:$pink;}
-		.blue-skill{background-color:$blue;}
-		.level1{width:30px;}
-		.level2{width:60px;}
-		.level3{width:90px;}
-		.level4{width:120px;}
-		.level5{width:150px;}
+			li{
+				overflow: hidden; 
+				height:40px; 
+					&:hover{
+						opacity: 0.7;
+					}
+			}
+
+			.pink-skill, .blue-skill{display:inline-block; float:right; height: 90%; text-indent: -999rem;}
+			.pink-skill{background-color:$pink;}
+			.blue-skill{background-color:$blue;}
+			.level1{width:10%;}
+			.level2{width:20%;}
+			.level3{width:30%;}
+			.level4{width:40%;}
+			.level5{width:50%;}
+		  }
 	  }
+		
+		.experience{
+			h4{margin-top: 0;}
+			h5{
+				font-size:1.5rem;
+				display: inline;
+				padding: 0px 10px;
+				margin: 20px 0 0 0;
+			}
+			ul{
+				list-style:none;
+				padding: 0;
+				
+				li{
+					cursor: pointer; cursor: hand;
+					width: 85%;
+					margin: 0 auto;
+					background: darken($bg-color, 10);
+					
+					&:nth-child(even){
+						background: $bg-color;
+					}
+				
+					p{
+						margin: 20px 0 0 0;
+						padding: 0 10px;
+					}
+					
+					&:hover{
+						.seeMoreButton{
+							opacity: 1;
+						}
+					}
+					.seeMoreButton{
+						width: 100%;
+						margin: 0;
+						padding: 0;
+						color: darken($bg-color, 30);
+						opacity: 0;
+						transition: opacity 200ms;
+					}
+					.seeMore{
+						background: $bg-color;
+						color: $text-color;
+						transition: max-height 1s;
+						text-align: left;
+						margin: 0;
+						overflow: hidden;
+					}
+					.hide{max-height:0;}
+					.show{max-height: 200px; height:auto;}
+				}
+				
+			}
+		}
+	  
 	}
 
 	#projects{
 		background: #aaaaaa;
-
+		.row{
+			margin: 0 auto;
+		}
+		
+		.projects{
+			position:relative;
+			margin: 0;
+		}
+		
 		.project{
-			margin-top: 50px;
+			height: 450px;
+			
+			display: inline-block; float: left;
+			position:relative;
+			
+			.column, .columns{
+				position:relative;
+				height: 100%;
+			}
+			
+			.arrow{
+				position: relative;
+				cursor: pointer; cursor: hand;
+				top: 50%;
+				background-image: url('../img/arrow.png');
+				height: 60px;
+				width: 30px;
+				
+				
+				&:hover{
+					opacity: 0.8;
+				}
+			}
+			.next{background-position: 30px;}
+			
 		}
 	}
 }
