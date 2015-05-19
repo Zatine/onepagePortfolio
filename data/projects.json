@@ -3,7 +3,7 @@
 		"title" : "Photo Menu",
 		"img" : "img/projects/photomenu.png",
 		"alt" : "Photo Menu Wordpress Theme",
-		"url" : "#",
+		"url" : "http://wordpress.mikaelagrundin.com/photomenu",
 		"desc" : "A Wordpress theme created for a PHP-course, but also a practise in CSS3 and HTML5 using for example transitions and flexbox. The menu is updated dynamically according to each page's featured image, and all content is provided by the user through pages, posts and widgets.",
 		"link" : "Watch the theme in action!"
 	},
@@ -27,7 +27,7 @@
 		"title" : "Vintage Portfolio",
 		"img" : "img/projects/vintagePortfolio.png",
 		"alt" : "Vintage Portfolio",
-		"url" : "#",
+		"url" : "http://vintage.mikaelagrundin.com",
 		"desc" : "An older portfolio built during a course in HTML/CSS. The graphics are heavily influenced by the game Bioshock and vintage typography. All the different pages are retrieved with AJAX and the grid-system is written from scratch.",
 		"link" : "View the portfolio here!"
 	}

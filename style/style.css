@@ -429,9 +429,9 @@ h2, h3 {
 
 a, a:active, a:visited {
   text-decoration: none;
-  color: #A20017; }
+  color: #CB0441; }
   a:hover, a:active:hover, a:visited:hover {
-    color: #d5001e; }
+    color: #e40449; }
   a img, a:active img, a:visited img {
     transition: opacity 1s;
     -webkit-transition: opacity 1s; }

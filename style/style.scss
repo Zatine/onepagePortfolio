@@ -24,9 +24,9 @@ h2, h3{
 
 a, a:active, a:visited{
 	text-decoration: none;
-	color: #A20017;
+	color: #CB0441;
 	&:hover{
-		color: lighten(#A20017, 10);
+		color: lighten(#CB0441, 5);
 	}
 	img{
 		transition: opacity 1s;
