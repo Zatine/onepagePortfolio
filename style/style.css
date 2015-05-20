@@ -362,6 +362,18 @@ th {
 
 .row {
   margin: 50px auto; }
+  .row img {
+    max-width: 100%;
+    height: auto; }
+  .row a img {
+    max-width: 100%;
+    height: auto; }
+  .row .column, .row .columns {
+    margin: 0 auto;
+    width: 90%; }
+    @media (max-width: 600px) {
+      .row .column, .row .columns {
+        text-align: center; } }
 
 @media (min-width: 600px) {
   .row {
@@ -369,18 +381,12 @@ th {
     .row .column, .row .columns {
       float: left;
       margin-right: 1%; }
-      .row .column img, .row .columns img {
-        max-width: 100%;
-        height: auto; }
-      .row .column a img, .row .columns a img {
-        max-width: 100%;
-        height: auto; }
       .row .column:last-child, .row .columns:last-child {
         float: right; }
       .row .column:first-child, .row .columns:first-child {
         float: left; }
     .row .half {
-      width: width_clac(0.5); }
+      width: 3.16667%; }
     .row .one {
       width: 7.33333%; }
     .row .two {
@@ -423,6 +429,9 @@ body {
   color: #1a1a1a;
   background: #E6E6E6;
   height: 100%; }
+  @media (max-width: 600px) {
+    body {
+      font-size: 22px; } }
 
 h2, h3 {
   font-weight: normal; }
@@ -438,11 +447,13 @@ a, a:active, a:visited {
     a img:hover, a:active img:hover, a:visited img:hover {
       opacity: 0.7; }
 
-.left {
-  float: left; }
+@media (min-width: 600px) {
+  .left {
+    float: left; } }
 
-.right {
-  float: right; }
+@media (min-width: 600px) {
+  .right {
+    float: right; } }
 
 .left-align {
   text-align: left; }
@@ -470,6 +481,10 @@ a, a:active, a:visited {
 .show-inline {
   display: inline; }
 
+@media (max-width: 600px) {
+  .hidden-mobile {
+    display: none; } }
+
 .sub-title {
   font-size: 1.5rem;
   font-weight: 600; }
@@ -491,32 +506,49 @@ a, a:active, a:visited {
 .header-image {
   background-image: url("../img/header.jpg");
   background-size: cover;
-  background-position: top;
-  background-attachment: fixed; }
+  background-position: top; }
+  @media (max-width: 600px) {
+    .header-image {
+      background-size: 330%; } }
 
 header {
-  background: #000;
+  background: #aaa;
   width: 100%;
   position: relative;
-  text-shadow: 2px 2px 1px #000;
   text-align: center;
-  color: #cbcbcb;
-  height: 90%;
+  height: 100%;
   min-height: 950px;
   overflow: hidden; }
+  @media (max-width: 600px) {
+    header {
+      max-height: 500px;
+      min-height: 0; } }
   header #header-text {
     position: relative;
     top: 10%; }
+    header #header-text a:hover img {
+      opacity: 0.5; }
     header #header-text h1 {
       margin: 0;
       font-family: "Nothing You Could Do", sans-serif;
-      font-size: 8rem; }
+      font-size: 8rem;
+      color: #393939; }
+      @media (max-width: 600px) {
+        header #header-text h1 {
+          font-size: 3.4rem; } }
     header #header-text h2 {
       margin: -40px 0 0 0;
       font-weight: 300;
       font-size: 4rem; }
+      @media (max-width: 600px) {
+        header #header-text h2 {
+          font-size: 1.8rem;
+          margin-top: 0; } }
   header nav {
     font-size: 2rem; }
+    @media (max-width: 600px) {
+      header nav {
+        display: none; } }
     header nav ul {
       list-style: none;
       padding: 0; }
@@ -526,21 +558,30 @@ header {
         header nav ul li a, header nav ul li a:active, header nav ul li a:visited {
           transition: color 500ms;
           -webkit-transition: color 300ms;
-          color: #cbcbcb;
-          text-shadow: 2px 2px 5px #000; }
+          color: #cbcbcb; }
           header nav ul li a:hover, header nav ul li a:active:hover, header nav ul li a:visited:hover {
-            color: #fff; }
+            color: #e5e5e5; }
 
 main h3 {
   font-size: 4rem;
   text-align: center;
   margin-top: 0px; }
+  @media (max-width: 600px) {
+    main h3 {
+      font-size: 3rem; } }
 main h4 {
   font-size: 3rem;
   font-family: "Nothing You Could Do", sans-serif;
   margin: 0; }
+  @media (max-width: 600px) {
+    main h4 {
+      font-size: 2rem; } }
 main section {
-  padding: 50px 0; }
+  padding: 50px 0;
+  box-shadow: inset rgba(198, 198, 198, 0.69) 0px 10px 30px; }
+  @media (max-width: 600px) {
+    main section {
+      padding: 20px 0; } }
 main #about h4 {
   font-size: 2.4rem;
   font-weight: bold;
@@ -567,6 +608,9 @@ main #about .skills {
     padding: 0;
     max-width: 375px;
     margin: 50px auto; }
+    @media (max-width: 600px) {
+      main #about .skills ul {
+        font-size: 1.5rem; } }
     main #about .skills ul li {
       overflow: hidden;
       height: 40px; }
@@ -598,6 +642,12 @@ main #about .experience h5 {
   display: inline;
   padding: 0px 10px;
   margin: 20px 0 0 0; }
+  @media (max-width: 600px) {
+    main #about .experience h5 {
+      font-size: 1.8rem; } }
+@media (max-width: 600px) {
+  main #about .experience {
+    font-size: 1.7rem; } }
 main #about .experience ul {
   list-style: none;
   padding: 0; }
@@ -633,21 +683,37 @@ main #about .experience ul {
     main #about .experience ul li .show {
       max-height: 200px;
       height: auto; }
+      @media (max-width: 600px) {
+        main #about .experience ul li .show {
+          max-height: 300px; } }
 main #projects {
-  background: #aaaaaa; }
+  background: #aaaaaa;
+  box-shadow: inset rgba(149, 149, 149, 0.69) 0px 10px 30px;
+  overflow: auto; }
   main #projects .row {
     margin: 0 auto; }
   main #projects .projects {
     position: relative;
     margin: 0; }
+    @media (max-width: 600px) {
+      main #projects .projects {
+        display: none; } }
+  main #projects .mobile-projects {
+    display: none; }
+    @media (max-width: 600px) {
+      main #projects .mobile-projects {
+        display: block; } }
   main #projects .project {
-    height: 450px;
     display: inline-block;
     float: left;
     position: relative; }
-    main #projects .project .column, main #projects .project .columns {
-      position: relative;
-      height: 100%; }
+    @media (min-width: 600px) {
+      main #projects .project {
+        height: 450px; } }
+    @media (min-width: 600px) {
+      main #projects .project .column, main #projects .project .columns {
+        position: relative;
+        height: 100%; } }
     main #projects .project .arrow {
       position: relative;
       cursor: pointer;
@@ -660,8 +726,23 @@ main #projects {
         opacity: 0.8; }
     main #projects .project .next {
       background-position: 30px; }
+main #contact .contact-icon {
+  background-image: url("../img/contact_icons.png");
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  display: inline-block; }
+  main #contact .contact-icon:hover {
+    opacity: 0.7; }
+main #contact .git {
+  background-position: 100px; }
+main #contact .li {
+  background-position: 200px; }
 
 footer {
-  text-align: center; }
+  text-align: center;
+  background: #e1e1e1; }
+  footer p {
+    margin: 0; }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,6 +13,7 @@ html{
 body{
 	font-family: $text-font;
 	font-size: 22px;
+	@media(max-width:600px){font-size:22px;}
 	color: $text-color;
 	background: $bg-color;
 	height: 100%;
@@ -37,8 +38,8 @@ a, a:active, a:visited{
 	}
 }
 
-.left{float:left;}
-.right{float:right;}
+.left{@media(min-width:600px){float:left;}}
+.right{@media(min-width:600px){float:right;}}
 .left-align{text-align:left;}
 .right-align{text-align:right;}
 .center-align{text-align:center;}
@@ -50,7 +51,7 @@ a, a:active, a:visited{
 .show-block{display: block;}
 .show-ib{display:inline-block;}
 .show-inline{display:inline;}
-	
+.hidden-mobile{@media(max-width:600px){display:none;}}
 
 .sub-title{
   font-size: 1.5rem;
@@ -76,32 +77,43 @@ a, a:active, a:visited{
 	background-image: url('../img/header.jpg');
 	background-size: cover;
 	background-position: top;
-	background-attachment: fixed;
+  	@media(max-width:600px){
+	  background-size:330%
+	}
+  	//box-shadow: inset 0px -70px 80px $bg-color;
 }
 
 header{
-	background: #000;
+	background: #aaa;
 	width: 100%;
 	position: relative;
-	text-shadow: 2px 2px 1px #000;
 	text-align: center;
-	color: #cbcbcb;
-	height: 90%;
+	height: 100%;
 	min-height: 950px;
+  @media(max-width:600px){max-height: 500px; min-height: 0;}
 	overflow: hidden;
 	
 	#header-text{
 		position: relative;
 		top: 10%;
+	  	a:hover{
+		  img{opacity:0.5;}
+		}
 
 			h1{	margin: 0;
 				font-family: $header-font;
-				font-size: 8rem;}
+				font-size: 8rem;
+			  	color:#393939;
+			  @media(max-width:600px){font-size:3.4rem;}
+			}
 			h2{	margin: -40px 0 0 0;
 				font-weight: 300;
-				font-size: 4rem;}
+				font-size: 4rem;
+			  @media(max-width:600px){font-size:1.8rem; margin-top:0;}
+			}
 			}
 	nav{
+	  @media(max-width:600px){display:none;}
 		font-size: 2rem;
 		ul{
 			list-style: none;
@@ -110,13 +122,12 @@ header{
 				padding: 0 20px;
 				display: inline-block;
 				
-				
 				a, a:active, a:visited{
 					transition: color 500ms;
 					-webkit-transition: color 300ms;
 					color: #cbcbcb;
-					text-shadow: 2px 2px 5px #000;
-					&:hover{color: #fff;}
+					&:hover{color: lighten(#cbcbcb, 10);}
+
 				}
 			}
 		}
@@ -127,13 +138,18 @@ header{
 
 main{
 	h3{	font-size: 4rem;
+	  @media(max-width:600px){font-size:3rem;}
 		text-align: center;
 		margin-top: 0px;}
 	h4{	font-size: 3rem;
+	  @media(max-width:600px){font-size:2rem;}
 		font-family: $header-font;
 		margin: 0;}
 	
-	section{padding: 50px 0;}
+	section{padding: 50px 0;
+	  		@media(max-width:600px){padding: 20px 0;}
+			box-shadow: inset rgba(198, 198, 198, 0.69) 0px 10px 30px;
+	}
 
   	#about{
 	  h4{font-size: 2.4rem; font-weight:bold; margin-top:50px;}
@@ -155,6 +171,7 @@ main{
 
 			  ul{
 			font-size: 2rem;
+				@media(max-width:600px){font-size:1.5rem;}
 			text-align: left;
 			list-style: none;
 			padding: 0;
@@ -184,10 +201,12 @@ main{
 			h4{margin-top: 0;}
 			h5{
 				font-size:1.5rem;
+			  @media(max-width:600px){font-size:1.8rem;}
 				display: inline;
 				padding: 0px 10px;
 				margin: 20px 0 0 0;
 			}
+		  @media(max-width:600px){font-size:1.7rem;}
 			ul{
 				list-style:none;
 				padding: 0;
@@ -229,7 +248,7 @@ main{
 						overflow: hidden;
 					}
 					.hide{max-height:0;}
-					.show{max-height: 200px; height:auto;}
+					.show{max-height: 200px; height:auto; @media(max-width:600px){max-height:300px;}}
 				}
 				
 			}
@@ -239,6 +258,8 @@ main{
 
 	#projects{
 		background: #aaaaaa;
+	  	box-shadow: inset rgba(149, 149, 149, 0.69) 0px 10px 30px;
+	  	overflow: auto;
 		.row{
 			margin: 0 auto;
 		}
@@ -246,18 +267,32 @@ main{
 		.projects{
 			position:relative;
 			margin: 0;
+		  @media(max-width:600px){
+			display:none;
+		  }
+		}
+
+	  	.mobile-projects{
+
+		  display: none;
+		  @media(max-width:600px){
+			display:block;
+		  }
 		}
 		
 		.project{
-			height: 450px;
+			@media(min-width:600px){
+		  	height: 450px;}
 			
 			display: inline-block; float: left;
 			position:relative;
-			
+
+		  @media(min-width:600px){
 			.column, .columns{
 				position:relative;
 				height: 100%;
 			}
+		  }
 			
 			.arrow{
 				position: relative;
@@ -276,8 +311,33 @@ main{
 			
 		}
 	}
+	#contact{
+	  .contact-icon{
+		background-image: url('../img/contact_icons.png');
+		height: 100px;
+		width: 100px;
+		margin: 0 auto;
+		display:inline-block;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	  }
+	  .mail {
+	  }
+	  .git {
+	  	background-position: 100px;
+	  }
+	  .li {
+	  	background-position: 200px;
+	  }
+	}
 }
 
 footer{
 	text-align: center;
+  background: rgba(225, 225, 225, 1);
+  p{
+	margin: 0;
+  }
 }

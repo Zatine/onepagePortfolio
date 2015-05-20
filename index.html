@@ -13,9 +13,6 @@
 			<div id="header-text">
 				<h1>Mikaela Grundin</h1>
 				<h2>Front End &amp; Design</h2>
-			</div>
-
-			<div class="bottom">
 				<nav>
 					<ul>
 						<li><a href="#about">About</a></li>
@@ -23,7 +20,11 @@
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
-				
+				<a href="#about"><img src="img/down.png"></a>
+			</div>
+
+			<div class="bottom">
+
 			</div>
 	</header>
 	
@@ -105,7 +106,7 @@
 								<h5 class="left">Media Production</h5>
 								<p class="right">INIT College 2008-2011</p>
 								<p class="clear seeMoreButton">&#x25BC;</p>
-								<p class="seeMore hidden">Photoshop, text communication, web design. Focus on advertisement and film. International approach, with several subjects being taught in English. Ability to add a lot of subjects that were not native to my program such as math, psychology, programming and Japanese.</p>
+								<p class="seeMore hidden">Photoshop, text communication, web design. Focus on advertisement and film. <span class="hidden-mobile">International approach, with several subjects being taught in English. Ability to add a lot of subjects that were not native to my program such as math, psychology, programming and Japanese.</span></p>
 							</li>
 						</ul>
 					</div>
@@ -127,7 +128,7 @@
 							</li>
 							
 							<li class="infoContainer">
-								<h5 class="left">Sampler/Demonstrator</h5>
+								<h5 class="left">Sampler<span class="hidden-mobile">/Demonstrator</span></h5>
 								<p class="right">Various 2012-2015</p>
 								<p class="clear seeMoreButton">&#x25BC;</p>
 								<p class="seeMore hidden">Part time jobs within marketing, for example giving out free samples or arranging activities for children. </p>
@@ -141,12 +142,64 @@
 		
 		<section id="projects">
 			<div class="container">
+
 				<div class="row">
 					<div class="twelve columns">
 						<h3>Stuff I've done</h3>
 					</div>
 				</div>
+
+				<div class="mobile-projects">
+					<div class="row project">
+						<div class="six columns">
+							<a href="http://wordpress.mikaelagrundin.com/photomenu" target="_blank"><img src="img/projects/photomenu.png" alt="Photomenu Wordpress Theme"></a>
+						</div>
+						<div class="six columns">
+							<h4>Photo Menu</h4>
+							<p>A Wordpress theme created for a PHP-course, but also a practise in CSS3 and HTML5 using for example transitions and flexbox. The menu is updated dynamically according to each page's featured image, and all content is provided by the user through pages, posts and widgets.</p>
+							<p><a href="http://wordpress.mikaelagrundin.com/photomenu" target="_blank">Watch the theme in action!</a></p>
+						</div>
+					</div>
+
+					<div class="row project">
+						<div class="six columns">
+							<a href="http://snake.mikaelagrundin.com/" target="_blank"><img src="img/projects/snake.png" alt="Snake Game"></a>
+						</div>
+						<div class="six columns">
+							<h4>Snake</h4>
+							<p>While learning JavaScript in school we made a &#34;Lights out&#34;-game by creating a table and assigning different ID&#39;s to all the cells. It was a fun challenge, and I thought it might be possible to create a more advanced game with the same technique. I realized the classic game of Snake would be perfect, and probably suit my current skill level at the time.</p><p> It&#39;s not perfect, but I&#39;m definitely satisfied and think it works well. I&#39;m also happy with the graphics I made, even if the styling isn&#39;t completely finished yet."</p>
+							<p><a href="http://snake.mikaelagrundin.com/" target="_blank">Play Snake here!</a></p>
+						</div>
+					</div>
+
+
+						<div class="row project">
+							<div class="six columns">
+							<a href="http://screendancefestival.com" target="_blank"><img src="img/projects/screendance.png" alt="ScreenDance Festival"></a>
+							</div>
+							<div class="six columns">
+								<h4>ScreenDance Festival</h4>
+								<p>An upgrade of ScreenDance Festival&#39;s website. Made together with <a href="http://emmaberglund.github.io" target="_blank">Emma Berglund</a> using Wordpress.</p><p>Tasks included designing and building a theme from scratch with little prior knowledge of PHP or Wordpress, making it easy to update and keeping the website responsive for different devices. To make the work slightly easier, we used the grid-framework <a href="http://getskeleton.com" target="_blank">Skeleton</a>.
+								</p>
+								<p><a href="http://screendancefestival.com" target="_blank">Visit the ScreenDance Festival website here!</a></p>
+							</div>
+						</div>
+
+						<div class="row project">
+							<div class="six columns">
+							<a href="http://screendancefestival.com" target="_blank"><img src="img/projects/vintagePortfolio.png" alt="Vintage Portfolio"></a>
+							</div>
+
+							<div class="six columns">
+								<h4>Vintage Portfolio</h4>
+								<p>An older portfolio built during a course in HTML/CSS. The graphics are heavily influenced by the game Bioshock and vintage typography. All the different pages are retrieved with AJAX and the grid-system is written from scratch.</p>
+								<p><a href="http://vintage.mikaelagrundin.com" target="_blank">View the portfolio here!</a></p>
+							</div>
+						</div>
+				</div>
+
 				<div class="projects"></div>
+				</div>
 		</section>
 		
 		<section id="contact">
@@ -157,9 +210,17 @@
 					</div>
 				</div>
 				<div class="row center-align">
-						<p><a href="mailto:me@mikaelagrundin.com">me@mikaelagrundin.com</a></p>
-						<a href="#"><div class="contact-icon git" title="GitHub">GitHub</div></a>
-						<a href="#"><div class="contact-icon li" title="LinkedIn">LinkedIn</div></a>
+					<div class="four columns">
+						<a href="mailto:me@mikaelagrundin.com" target="_blank"><div class="contact-icon mail"></div></a>
+						<p>me@mikaelagrundin.com</p>
+					</div>
+
+					<div class="four columns"><a href="https://github.com/Zatine" target="_blank"><div class="contact-icon git" title="GitHub"></div></a>
+						<p>GitHub</p>
+					</div>
+
+					<div class="four columns"><a href="https://www.linkedin.com/pub/mikaela-grundin/41/44/936" target="_blank"><div class="contact-icon li" title="LinkedIn"></div></a>
+					<p>LinkedIn</p></div>
 					</div>
 				</div>
 			</div>
