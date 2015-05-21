@@ -371,11 +371,11 @@ th {
   .row .column, .row .columns {
     margin: 0 auto;
     width: 90%; }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .row .column, .row .columns {
         text-align: center; } }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .row {
     width: 100%; }
     .row .column, .row .columns {
@@ -421,17 +421,17 @@ th {
   box-sizing: border-box; }
 
 html {
-  height: 100%; }
+  height: 100%;
+  font-size: 22px; }
+  @media (max-width: 700px) {
+    html {
+      font-size: 22px; } }
 
 body {
   font-family: "Quicksand", sans-serif;
-  font-size: 22px;
   color: #1a1a1a;
   background: #E6E6E6;
   height: 100%; }
-  @media (max-width: 600px) {
-    body {
-      font-size: 22px; } }
 
 h2, h3 {
   font-weight: normal; }
@@ -447,11 +447,11 @@ a, a:active, a:visited {
     a img:hover, a:active img:hover, a:visited img:hover {
       opacity: 0.7; }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .left {
     float: left; } }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .right {
     float: right; } }
 
@@ -481,12 +481,12 @@ a, a:active, a:visited {
 .show-inline {
   display: inline; }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .hidden-mobile {
     display: none; } }
 
 .sub-title {
-  font-size: 1.5rem;
+  font-size: 1.1em;
   font-weight: 600; }
 
 .pink {
@@ -507,7 +507,10 @@ a, a:active, a:visited {
   background-image: url("../img/header.jpg");
   background-size: cover;
   background-position: top; }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
+    .header-image {
+      background-size: 140%; } }
+  @media (max-width: 400px) {
     .header-image {
       background-size: 330%; } }
 
@@ -519,7 +522,7 @@ header {
   height: 100%;
   min-height: 950px;
   overflow: hidden; }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     header {
       max-height: 500px;
       min-height: 0; } }
@@ -531,22 +534,22 @@ header {
     header #header-text h1 {
       margin: 0;
       font-family: "Nothing You Could Do", sans-serif;
-      font-size: 8rem;
+      font-size: 4em;
       color: #393939; }
-      @media (max-width: 600px) {
+      @media (max-width: 700px) {
         header #header-text h1 {
-          font-size: 3.4rem; } }
+          font-size: 2.4em; } }
     header #header-text h2 {
-      margin: -40px 0 0 0;
+      margin: -30px 0 0 0;
       font-weight: 300;
-      font-size: 4rem; }
-      @media (max-width: 600px) {
+      font-size: 2.5em; }
+      @media (max-width: 700px) {
         header #header-text h2 {
-          font-size: 1.8rem;
+          font-size: 1.2em;
           margin-top: 0; } }
   header nav {
-    font-size: 2rem; }
-    @media (max-width: 600px) {
+    font-size: 1.2em; }
+    @media (max-width: 700px) {
       header nav {
         display: none; } }
     header nav ul {
@@ -563,27 +566,27 @@ header {
             color: #e5e5e5; }
 
 main h3 {
-  font-size: 4rem;
+  font-size: 3em;
   text-align: center;
   margin-top: 0px; }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     main h3 {
-      font-size: 3rem; } }
+      font-size: 2em; } }
 main h4 {
-  font-size: 3rem;
+  font-size: 2em;
   font-family: "Nothing You Could Do", sans-serif;
   margin: 0; }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     main h4 {
-      font-size: 2rem; } }
+      font-size: 2em; } }
 main section {
   padding: 50px 0;
   box-shadow: inset rgba(198, 198, 198, 0.69) 0px 10px 30px; }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     main section {
       padding: 20px 0; } }
 main #about h4 {
-  font-size: 2.4rem;
+  font-size: 2em;
   font-weight: bold;
   margin-top: 50px; }
 main #about .skills {
@@ -602,15 +605,15 @@ main #about .skills {
   main #about .skills #other-icon {
     background-position: 135px 0; }
   main #about .skills ul {
-    font-size: 2rem;
+    font-size: 1.5em;
     text-align: left;
     list-style: none;
     padding: 0;
     max-width: 375px;
     margin: 50px auto; }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       main #about .skills ul {
-        font-size: 1.5rem; } }
+        font-size: 1.5em; } }
     main #about .skills ul li {
       overflow: hidden;
       height: 40px; }
@@ -638,16 +641,16 @@ main #about .skills {
 main #about .experience h4 {
   margin-top: 0; }
 main #about .experience h5 {
-  font-size: 1.5rem;
+  font-size: 1em;
   display: inline;
   padding: 0px 10px;
   margin: 20px 0 0 0; }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     main #about .experience h5 {
-      font-size: 1.8rem; } }
-@media (max-width: 600px) {
+      font-size: 1.2em; } }
+@media (max-width: 700px) {
   main #about .experience {
-    font-size: 1.7rem; } }
+    font-size: 1em; } }
 main #about .experience ul {
   list-style: none;
   padding: 0; }
@@ -683,7 +686,7 @@ main #about .experience ul {
     main #about .experience ul li .show {
       max-height: 200px;
       height: auto; }
-      @media (max-width: 600px) {
+      @media (max-width: 700px) {
         main #about .experience ul li .show {
           max-height: 300px; } }
 main #projects {
@@ -695,22 +698,22 @@ main #projects {
   main #projects .projects {
     position: relative;
     margin: 0; }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       main #projects .projects {
         display: none; } }
   main #projects .mobile-projects {
     display: none; }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       main #projects .mobile-projects {
         display: block; } }
   main #projects .project {
     display: inline-block;
     float: left;
     position: relative; }
-    @media (min-width: 600px) {
+    @media (min-width: 700px) {
       main #projects .project {
         height: 450px; } }
-    @media (min-width: 600px) {
+    @media (min-width: 700px) {
       main #projects .project .column, main #projects .project .columns {
         position: relative;
         height: 100%; } }

@@ -1,6 +1,6 @@
 @import 'normalize';
-@import 'grid';
 @import 'var';
+@import 'grid';
 
 *{
 	box-sizing: border-box;
@@ -8,12 +8,13 @@
 
 html{
 	height: 100%;
+  font-size: 22px;
+  @media(max-width:$mobile){font-size:22px;}
+
 }
 
 body{
 	font-family: $text-font;
-	font-size: 22px;
-	@media(max-width:600px){font-size:22px;}
 	color: $text-color;
 	background: $bg-color;
 	height: 100%;
@@ -38,8 +39,8 @@ a, a:active, a:visited{
 	}
 }
 
-.left{@media(min-width:600px){float:left;}}
-.right{@media(min-width:600px){float:right;}}
+.left{@media(min-width:$mobile){float:left;}}
+.right{@media(min-width:$mobile){float:right;}}
 .left-align{text-align:left;}
 .right-align{text-align:right;}
 .center-align{text-align:center;}
@@ -51,10 +52,10 @@ a, a:active, a:visited{
 .show-block{display: block;}
 .show-ib{display:inline-block;}
 .show-inline{display:inline;}
-.hidden-mobile{@media(max-width:600px){display:none;}}
+.hidden-mobile{@media(max-width:$mobile){display:none;}}
 
 .sub-title{
-  font-size: 1.5rem;
+  font-size: 1.1em;
   font-weight: 600;
 }
 .pink{
@@ -77,9 +78,13 @@ a, a:active, a:visited{
 	background-image: url('../img/header.jpg');
 	background-size: cover;
 	background-position: top;
-  	@media(max-width:600px){
+  	@media(max-width:$mobile){
+	  background-size:140%
+	}
+  	@media(max-width:400px){
 	  background-size:330%
 	}
+
   	//box-shadow: inset 0px -70px 80px $bg-color;
 }
 
@@ -90,7 +95,7 @@ header{
 	text-align: center;
 	height: 100%;
 	min-height: 950px;
-  @media(max-width:600px){max-height: 500px; min-height: 0;}
+  @media(max-width:$mobile){max-height: 500px; min-height: 0;}
 	overflow: hidden;
 	
 	#header-text{
@@ -102,19 +107,19 @@ header{
 
 			h1{	margin: 0;
 				font-family: $header-font;
-				font-size: 8rem;
+				font-size: 4em;
 			  	color:#393939;
-			  @media(max-width:600px){font-size:3.4rem;}
+			  @media(max-width:$mobile){font-size:2.4em;}
 			}
-			h2{	margin: -40px 0 0 0;
+			h2{	margin: -30px 0 0 0;
 				font-weight: 300;
-				font-size: 4rem;
-			  @media(max-width:600px){font-size:1.8rem; margin-top:0;}
+				font-size: 2.5em;
+			  @media(max-width:$mobile){font-size:1.2em; margin-top:0;}
 			}
 			}
 	nav{
-	  @media(max-width:600px){display:none;}
-		font-size: 2rem;
+	  @media(max-width:$mobile){display:none;}
+		font-size: 1.2em;
 		ul{
 			list-style: none;
 			padding: 0;
@@ -137,22 +142,22 @@ header{
 
 
 main{
-	h3{	font-size: 4rem;
-	  @media(max-width:600px){font-size:3rem;}
+	h3{	font-size: 3em;
+	  @media(max-width:$mobile){font-size:2em;}
 		text-align: center;
 		margin-top: 0px;}
-	h4{	font-size: 3rem;
-	  @media(max-width:600px){font-size:2rem;}
+	h4{	font-size: 2em;
+	  @media(max-width:$mobile){font-size:2em;}
 		font-family: $header-font;
 		margin: 0;}
 	
 	section{padding: 50px 0;
-	  		@media(max-width:600px){padding: 20px 0;}
+	  		@media(max-width:$mobile){padding: 20px 0;}
 			box-shadow: inset rgba(198, 198, 198, 0.69) 0px 10px 30px;
 	}
 
   	#about{
-	  h4{font-size: 2.4rem; font-weight:bold; margin-top:50px;}
+	  h4{font-size: 2em; font-weight:bold; margin-top:50px;}
 
 	  .skills{
 			h4{
@@ -170,8 +175,8 @@ main{
 			#other-icon{background-position: 135px 0;}
 
 			  ul{
-			font-size: 2rem;
-				@media(max-width:600px){font-size:1.5rem;}
+			font-size: 1.5em;
+				@media(max-width:$mobile){font-size:1.5em;}
 			text-align: left;
 			list-style: none;
 			padding: 0;
@@ -200,13 +205,13 @@ main{
 		.experience{
 			h4{margin-top: 0;}
 			h5{
-				font-size:1.5rem;
-			  @media(max-width:600px){font-size:1.8rem;}
+				font-size:1em;
+			  @media(max-width:$mobile){font-size:1.2em;}
 				display: inline;
 				padding: 0px 10px;
 				margin: 20px 0 0 0;
 			}
-		  @media(max-width:600px){font-size:1.7rem;}
+		  @media(max-width:$mobile){font-size:1em;}
 			ul{
 				list-style:none;
 				padding: 0;
@@ -248,7 +253,7 @@ main{
 						overflow: hidden;
 					}
 					.hide{max-height:0;}
-					.show{max-height: 200px; height:auto; @media(max-width:600px){max-height:300px;}}
+					.show{max-height: 200px; height:auto; @media(max-width:$mobile){max-height:300px;}}
 				}
 				
 			}
@@ -267,7 +272,7 @@ main{
 		.projects{
 			position:relative;
 			margin: 0;
-		  @media(max-width:600px){
+		  @media(max-width:$mobile){
 			display:none;
 		  }
 		}
@@ -275,19 +280,19 @@ main{
 	  	.mobile-projects{
 
 		  display: none;
-		  @media(max-width:600px){
+		  @media(max-width:$mobile){
 			display:block;
 		  }
 		}
 		
 		.project{
-			@media(min-width:600px){
+			@media(min-width:$mobile){
 		  	height: 450px;}
 			
 			display: inline-block; float: left;
 			position:relative;
 
-		  @media(min-width:600px){
+		  @media(min-width:$mobile){
 			.column, .columns{
 				position:relative;
 				height: 100%;

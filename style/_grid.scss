@@ -21,10 +21,10 @@ $column_width: ($row_width - ($column_amount * $column_margin)) / $column_amount
   .column, .columns{
     margin: 0 auto;
     width:90%;
-    @media(max-width:600px){text-align:center;}}
+    @media(max-width:$mobile){text-align:center;}}
 }
 
-@media(min-width: 600px){
+@media(min-width: $mobile){
   .row{
     width: unquote($row_width + "%");
 

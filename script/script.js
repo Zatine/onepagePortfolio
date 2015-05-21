@@ -130,21 +130,40 @@ xhr.open("GET", "data/projects.json");
 xhr.send();
 
 //SCROLLING ANIMATION
-function runScroll() {
-	scrollTo(document.body, 0, 600);
+
+var links = document.querySelectorAll('.scroll');
+var body = (navigator.userAgent.toLowerCase().indexOf('chrome') !== -1)  ? document.body : document.documentElement;
+
+function scrollTo(link, section){
+	var easeInOutCubic = function(t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t*t + b;
+		return c/2*((t-=2)*t*t + 2) + b
+	};
+
+	link.addEventListener('click', function(e){
+		var sectionItem = document.querySelector(section);
+
+		var startTime;
+		var startPos = document.body.scrollTop;
+		var endPos = (sectionItem.offsetTop - sectionItem.scrollTop + sectionItem.clientTop);
+		var maxScroll = body.scrollHeight - window.innerHeight;
+		var scrollEndValue = startPos + endPos < maxScroll ? endPos : maxScroll - startPos;
+		var duration = 1400;
+		var scroll = function(timestamp) {
+			startTime = startTime || timestamp;
+			var elapsed = timestamp - startTime;
+			var progress = easeInOutCubic(elapsed, startPos, scrollEndValue, duration);
+			body.scrollTop = progress;
+			elapsed < duration && requestAnimationFrame(scroll)
+		};
+		requestAnimationFrame(scroll);
+		e.preventDefault();
+
+	}, false)
 }
-var scrollme;
-scrollme = document.querySelector("#scrollme");
-scrollme.addEventListener("click",runScroll,false)
 
-function scrollTo(element, to, duration) {
-	if (duration < 0) return;
-	var difference = to - element.scrollTop;
-	var perTick = difference / duration * 10;
 
-	setTimeout(function() {
-		element.scrollTop = element.scrollTop + perTick;
-		if (element.scrollTop == to) return;
-		scrollTo(element, to, duration - 10);
-	}, 10);
+for(var j = 0, len = links.length; j < len; j++){
+	var section = links[j].getAttribute('href');
+	scrollTo(links[j], section);
 }
