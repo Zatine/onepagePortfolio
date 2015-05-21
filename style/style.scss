@@ -287,17 +287,14 @@ main{
 		
 		.project{
 			@media(min-width:$mobile){
-		  	height: 450px;}
+		  	height: 450px;
+			}
+			@media(max-width:$mobile){
+				h4{font-size: 1.5em;}
+			}
 			
 			display: inline-block; float: left;
 			position:relative;
-
-		  @media(min-width:$mobile){
-			.column, .columns{
-				position:relative;
-				height: 100%;
-			}
-		  }
 			
 			.arrow{
 				position: relative;
@@ -323,6 +320,8 @@ main{
 		width: 100px;
 		margin: 0 auto;
 		display:inline-block;
+		transition: opacity 300ms;
+		-webkit-transition: opacity 200ms;
 
 		&:hover {
 			opacity: 0.7;
@@ -340,8 +339,9 @@ main{
 }
 
 footer{
+	color: #868686;
 	text-align: center;
-  background: rgba(225, 225, 225, 1);
+  	background: rgb(225, 225, 225);
   p{
 	margin: 0;
   }

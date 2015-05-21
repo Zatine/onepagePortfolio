@@ -16,7 +16,7 @@ $column_width: ($row_width - ($column_amount * $column_margin)) / $column_amount
 .row {
   margin: 50px auto;
   img{max-width: 100%;  height: auto;}
-  a img{max-width: 100%;  height: auto;}
+  a img{max-width: 100%;  height: auto; width:100%;}
 
   .column, .columns{
     margin: 0 auto;
