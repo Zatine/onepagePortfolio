@@ -24,7 +24,6 @@ for(var i = 0; i < infoContainer.length; i++){
 
 var xhr = new XMLHttpRequest();
 var projectCycle = [];
-var view;
 
 function previousButton(button, i){
 	
@@ -135,6 +134,7 @@ var links = document.querySelectorAll('.scroll');
 var body = (navigator.userAgent.toLowerCase().indexOf('chrome') !== -1)  ? document.body : document.documentElement;
 
 function scrollTo(link, section){
+	//Animation script provided by http://www.cssscript.com/smooth-scroll-to-animation-with-anchor-scrolling-js-library/ , modified by me
 	var easeInOutCubic = function(t, b, c, d) {
 		if ((t/=d/2) < 1) return c/2*t*t*t + b;
 		return c/2*((t-=2)*t*t + 2) + b

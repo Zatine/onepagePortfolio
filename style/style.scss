@@ -27,6 +27,7 @@ h2, h3{
 a, a:active, a:visited{
 	text-decoration: none;
 	color: #CB0441;
+  	transition: color 200ms;
 	&:hover{
 		color: lighten(#CB0441, 5);
 	}
@@ -37,6 +38,21 @@ a, a:active, a:visited{
 			opacity: 0.7;
 		}
 	}
+}
+
+.nav-arrow{background-image:url('../img/nav-arrow.png');
+			height:15px;
+  			width: 35px;
+  			margin: 0 auto;
+  			transition: opacity 200ms;
+  			-webkit-transition: opacity 200ms;
+  	&.top{background-position: -35px;}
+  	&.next-light{background-position: -75px;}
+  	&.top-light{background-position: 35px;}
+  &:hover{
+	opacity:0.5;
+  }
+
 }
 
 .left{@media(min-width:$mobile){float:left;}}
@@ -53,6 +69,7 @@ a, a:active, a:visited{
 .show-ib{display:inline-block;}
 .show-inline{display:inline;}
 .hidden-mobile{@media(max-width:$mobile){display:none;}}
+.hidden-medium{@media(max-width:$medium){display:none;}}
 
 .sub-title{
   font-size: 1.1em;
@@ -101,10 +118,6 @@ header{
 	#header-text{
 		position: relative;
 		top: 10%;
-	  	a:hover{
-		  img{opacity:0.5;}
-		}
-
 			h1{	margin: 0;
 				font-family: $header-font;
 				font-size: 4em;
@@ -157,11 +170,13 @@ main{
 	}
 
   	#about{
-	  h4{font-size: 2em; font-weight:bold; margin-top:50px;}
+	  h4{font-size: 2em; font-weight:bold; margin-top:50px;
+	  	@media(max-width:$medium){font-size: 1.5em;}}
 
 	  .skills{
 			h4{
 			  height: 40px;
+			  @media(max-width:$medium){height:30px;}
 			}
 			text-align: center;
 			.skill-icons{
@@ -177,6 +192,7 @@ main{
 			  ul{
 			font-size: 1.5em;
 				@media(max-width:$mobile){font-size:1.5em;}
+				@media(max-width:$medium){font-size:1em;}
 			text-align: left;
 			list-style: none;
 			padding: 0;
@@ -185,7 +201,9 @@ main{
 
 			li{
 				overflow: hidden; 
-				height:40px; 
+				height:40px;
+			  @media(max-width:$medium){height:30px;}
+
 					&:hover{
 						opacity: 0.7;
 					}
@@ -262,8 +280,8 @@ main{
 	}
 
 	#projects{
-		background: #aaaaaa;
-	  	box-shadow: inset rgba(149, 149, 149, 0.69) 0px 10px 30px;
+		background: #ABCAD5;
+	  	box-shadow: inset #A7C4CE 0px 10px 30px;
 	  	overflow: auto;
 		.row{
 			margin: 0 auto;
@@ -295,7 +313,20 @@ main{
 			
 			display: inline-block; float: left;
 			position:relative;
-			
+
+		  	@media(min-width:$mobile){
+			  .column, .columns{
+				position:relative;
+				height: 100%;
+			  }
+			}
+
+		  	a{
+			  p{
+				display:inline-block;
+			  }
+			}
+
 			.arrow{
 				position: relative;
 				cursor: pointer; cursor: hand;

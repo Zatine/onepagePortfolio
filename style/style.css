@@ -439,7 +439,8 @@ h2, h3 {
 
 a, a:active, a:visited {
   text-decoration: none;
-  color: #CB0441; }
+  color: #CB0441;
+  transition: color 200ms; }
   a:hover, a:active:hover, a:visited:hover {
     color: #e40449; }
   a img, a:active img, a:visited img {
@@ -447,6 +448,22 @@ a, a:active, a:visited {
     -webkit-transition: opacity 1s; }
     a img:hover, a:active img:hover, a:visited img:hover {
       opacity: 0.7; }
+
+.nav-arrow {
+  background-image: url("../img/nav-arrow.png");
+  height: 15px;
+  width: 35px;
+  margin: 0 auto;
+  transition: opacity 200ms;
+  -webkit-transition: opacity 200ms; }
+  .nav-arrow.top {
+    background-position: -35px; }
+  .nav-arrow.next-light {
+    background-position: -75px; }
+  .nav-arrow.top-light {
+    background-position: 35px; }
+  .nav-arrow:hover {
+    opacity: 0.5; }
 
 @media (min-width: 700px) {
   .left {
@@ -484,6 +501,10 @@ a, a:active, a:visited {
 
 @media (max-width: 700px) {
   .hidden-mobile {
+    display: none; } }
+
+@media (max-width: 1100px) {
+  .hidden-medium {
     display: none; } }
 
 .sub-title {
@@ -530,8 +551,6 @@ header {
   header #header-text {
     position: relative;
     top: 10%; }
-    header #header-text a:hover img {
-      opacity: 0.5; }
     header #header-text h1 {
       margin: 0;
       font-family: "Nothing You Could Do", sans-serif;
@@ -590,10 +609,16 @@ main #about h4 {
   font-size: 2em;
   font-weight: bold;
   margin-top: 50px; }
+  @media (max-width: 1100px) {
+    main #about h4 {
+      font-size: 1.5em; } }
 main #about .skills {
   text-align: center; }
   main #about .skills h4 {
     height: 40px; }
+    @media (max-width: 1100px) {
+      main #about .skills h4 {
+        height: 30px; } }
   main #about .skills .skill-icons {
     background-image: url("../img/skill_icons.png");
     height: 135px;
@@ -615,9 +640,15 @@ main #about .skills {
     @media (max-width: 700px) {
       main #about .skills ul {
         font-size: 1.5em; } }
+    @media (max-width: 1100px) {
+      main #about .skills ul {
+        font-size: 1em; } }
     main #about .skills ul li {
       overflow: hidden;
       height: 40px; }
+      @media (max-width: 1100px) {
+        main #about .skills ul li {
+          height: 30px; } }
       main #about .skills ul li:hover {
         opacity: 0.7; }
     main #about .skills ul .pink-skill, main #about .skills ul .blue-skill {
@@ -691,8 +722,8 @@ main #about .experience ul {
         main #about .experience ul li .show {
           max-height: 300px; } }
 main #projects {
-  background: #aaaaaa;
-  box-shadow: inset rgba(149, 149, 149, 0.69) 0px 10px 30px;
+  background: #ABCAD5;
+  box-shadow: inset #A7C4CE 0px 10px 30px;
   overflow: auto; }
   main #projects .row {
     margin: 0 auto; }
@@ -717,6 +748,12 @@ main #projects {
     @media (max-width: 700px) {
       main #projects .project h4 {
         font-size: 1.5em; } }
+    @media (min-width: 700px) {
+      main #projects .project .column, main #projects .project .columns {
+        position: relative;
+        height: 100%; } }
+    main #projects .project a p {
+      display: inline-block; }
     main #projects .project .arrow {
       position: relative;
       cursor: pointer;
