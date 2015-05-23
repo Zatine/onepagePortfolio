@@ -22,6 +22,15 @@ for(var i = 0; i < infoContainer.length; i++){
 
 //PROJECTS
 
+
+//DETECT INTERNET EXPLORER
+ if (navigator.userAgent.indexOf('MSIE') != -1)
+  var detectIEregexp = /MSIE (\d+\.\d+);/ //test for MSIE x.x
+ else // if no "MSIE" string in userAgent
+  var detectIEregexp = /Trident.*rv[ :]*(\d+\.\d+)/ //test for rv:x.x or rv x.x where Trident string exists
+  var isIE = detectIEregexp.test(navigator.userAgent);
+
+if(!isIE){
 var xhr = new XMLHttpRequest();
 var projectCycle = [];
 
@@ -55,6 +64,7 @@ function viewProject(index){
 	document.querySelector('.projects').innerHTML = "";
 	document.querySelector('.projects').appendChild(projectCycle[index]);
 }
+
 
 xhr.onreadystatechange = function(){
 	if(xhr.readyState === 4 && xhr.status === 200){
@@ -127,7 +137,7 @@ xhr.onreadystatechange = function(){
 };
 xhr.open("GET", "data/projects.json");
 xhr.send();
-
+}
 //SCROLLING ANIMATION
 
 var links = document.querySelectorAll('.scroll');
