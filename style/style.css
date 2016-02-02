@@ -746,41 +746,53 @@ main #projects {
     margin: 0;
     color: inherit;
     width: 100%;
-    height: 240px;
     display: table;
     table-layout: fixed; }
     main #projects .projects a {
+      height: 240px;
       display: block;
       color: inherit; }
       @media (min-width: 750px) {
         main #projects .projects a {
           display: table-cell; } }
+      main #projects .projects a:last-child > div {
+        border-right: none; }
       main #projects .projects a > div {
         width: 100%;
         height: 100%;
         margin: 0;
         background-color: #e0e0e0;
         background-size: cover;
-        background-position: 50%;
+        background-position: 50% 50%;
         background-repeat: no-repeat;
+        -webkit-transition: background-position 500ms;
+        -moz-transition: background-position 500ms;
+        -o-transition: background-position 500ms;
         transition: background-position 500ms;
         overflow: hidden;
         position: relative;
-        cursor: pointer; }
+        cursor: pointer;
+        border: 1px solid #8EA2A9;
+        border-left: none; }
         main #projects .projects a > div .info {
-          max-width: 65%;
+          background-color: #1c1c1c;
+          color: #aaa;
+          width: 100%;
           position: absolute;
-          top: 10px;
-          right: -70%;
-          overflow: hidden;
-          transition: right 500ms;
-          font-size: 18px; }
-        main #projects .projects a > div:hover {
-          background-position: 350%; }
-          main #projects .projects a > div:hover .info {
-            right: 10px; }
-          main #projects .projects a > div:hover:before {
-            opacity: 0; }
+          padding: 1%;
+          bottom: -100%;
+          right: 0;
+          -webkit-transition: bottom 500ms;
+          -moz-transition: bottom 500ms;
+          -o-transition: bottom 500ms;
+          transition: bottom 500ms;
+          font-size: 0.8em; }
+          main #projects .projects a > div .info p {
+            margin: 0; }
+        main #projects .projects a > div:hover .info {
+          bottom: 0; }
+        main #projects .projects a > div:hover:before {
+          opacity: 0; }
         main #projects .projects a > div:before {
           display: block;
           height: 100%;
@@ -791,7 +803,10 @@ main #projects {
           left: 0;
           z-index: 2;
           content: " ";
-          opacity: 0.5;
+          opacity: 0.3;
+          -webkit-transition: opacity 500ms;
+          -moz-transition: opacity 500ms;
+          -o-transition: opacity 500ms;
           transition: opacity 500ms; }
         main #projects .projects a > div.snake {
           background-image: url("../img/projects/snake.png"); }
