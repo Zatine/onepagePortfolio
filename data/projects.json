@@ -16,14 +16,6 @@
 		"link" : "Play Snake here!"
 	},
 	{
-		"title" : "ScreenDance Festival",
-		"img" : "img/projects/screendance.png",
-		"alt" : "ScreenDance Festival Website",
-		"url" : "http://screendancefestival.com",
-		"desc" : "An upgrade of ScreenDance Festival&#39;s website. Made together with <a href=\"http://emmaberglund.github.io\" target=\"_blank\">Emma Berglund<\/a> using Wordpress.<\/p><p>Tasks included designing and building a theme from scratch with little prior knowledge of PHP or Wordpress, making it easy to update and keeping the website responsive for different devices. To make the work slightly easier, we used the grid-framework <a href=\"http://getskeleton.com\" target=\"_blank\">Skeleton<\/a>.",
-		"link" : "Visit the ScreenDance Festival website here!"
-	},
-	{
 		"title" : "Vintage Portfolio",
 		"img" : "img/projects/vintagePortfolio.png",
 		"alt" : "Vintage Portfolio",

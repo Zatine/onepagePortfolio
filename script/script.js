@@ -24,7 +24,7 @@ for(var i = 0; i < infoContainer.length; i++){
 
 
 //DETECT INTERNET EXPLORER
- if (navigator.userAgent.indexOf('MSIE') != -1)
+/* if (navigator.userAgent.indexOf('MSIE') != -1)
   var detectIEregexp = /MSIE (\d+\.\d+);/ //test for MSIE x.x
  else // if no "MSIE" string in userAgent
   var detectIEregexp = /Trident.*rv[ :]*(\d+\.\d+)/ //test for rv:x.x or rv x.x where Trident string exists
@@ -137,7 +137,7 @@ xhr.onreadystatechange = function(){
 };
 xhr.open("GET", "data/projects.json");
 xhr.send();
-}
+}*/
 //SCROLLING ANIMATION
 
 var links = document.querySelectorAll('.scroll');
