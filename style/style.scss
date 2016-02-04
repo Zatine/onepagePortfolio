@@ -40,20 +40,6 @@ a, a:active, a:visited{
 	}
 }
 
-.nav-arrow{background-image:url('../img/nav-arrow.png');
-			height:15px;
-  			width: 35px;
-  			margin: 50px auto;
-  			transition: opacity 200ms;
-  	&.top{background-position: -35px;}
-  	&.next-light{background-position: -75px;}
-  	&.top-light{background-position: 35px;}
-  &:hover{
-	opacity:0.5;
-  }
-
-}
-
 .left{@media(min-width:$mobile){float:left;}}
 .right{@media(min-width:$mobile){float:right;}}
 .left-align{text-align:left;}
@@ -112,35 +98,40 @@ $projects: 'fof' 'tp' 'rhythm' 'pmenu' 'vintage' 'snake';
 	  background-size:330%
 	}
 
-  	//box-shadow: inset 0px -70px 80px $bg-color;
 }
 
 header{
-	//background: #aaa;
 	width: 100%;
-	position: relative;
 	text-align: center;
-    padding-top: 50px;
-	//height: 100%;
-	//min-height: 950px;
-  @media(max-width:$mobile){max-height: 500px; min-height: 0;}
-	overflow: hidden;
+	overflow: hidden;    
+    height: 165px;
+    @media(min-width:$mobile){height: 205px;}
+    @media(min-width:$medium){height: 315px;}
+    background-color: #E0E0E0;
 	
 	#header-text{
-		position: relative;
-		top: 10%;
+            background-color: #60BFDF;
+            transform: rotate(4deg);
+            width: 140%;
+            margin-left: -20%;
+            height: 150px;
+            @media(min-width:$medium){height: 250px;}
+            padding: 40px;
 			h1{	margin: 0;
 				font-family: $header-font;
-				font-size: 4em;
-			  	color:#393939;
-			  @media(max-width:$mobile){font-size:2em;}
-			   @media(max-width:$medium) and(min-width:$mobile){font-size:2.7em;}
+				font-size: 1.5em;
+			  	color:$bg-color;
+			  @media(min-width:$small){font-size:2.2em;}
+			  @media(min-width:$mobile){font-size:2.7em;}
+			  @media(min-width:$medium){font-size:4em;}
 			}
-			h2{	margin: -30px 0 0 0;
+			h2{	margin: -10px 0 0 0;
 				font-weight: 300;
-				font-size: 2.5em;
-			  @media(max-width:$mobile){font-size:1.2em; margin-top:0;}
-			  @media(max-width:$medium) and(min-width:$mobile) {font-size:1.8em; margin-top:0;}
+				font-size: 1.1em;
+                color: $bg-color;
+			  @media(min-width:$small){font-size:1.5em; margin-top: -20px;}
+			  @media(min-width:$mobile){font-size:1.8em;}
+			  @media(min-width:$medium){font-size:2.5em;}
 			}
 			}
 	nav{
@@ -172,7 +163,7 @@ header{
 
 main{
 	h3{	font-size: 2em;
-	  @media(max-width:$mobile){font-size:1.7em;}
+	  @media(max-width:$mobile){font-size:1.7em; text-align: center;}
 		text-align: left;
         border-bottom: 1px solid darken($bg-color, 10);
 		margin: 0px;}
@@ -201,7 +192,6 @@ main{
       
 	  .skills{
 			h4{
-			  height: 40px;
 			  @media(max-width:$medium){height:30px;}
 			}
 			text-align: center;
@@ -217,20 +207,16 @@ main{
 
 			  ul{
 			font-size: 1.5em;
-				@media(max-width:$mobile){font-size:1.5em;}
+				@media(max-width:$mobile){font-size:1.5em; text-align: center;}
 				@media(max-width:$medium){font-size:1em;}
 			text-align: left;
 			list-style: none;
 			padding: 0;
-			max-width: 375px;
 			margin: 0 auto;
 
 			li{
-				overflow: hidden; 
-				height:40px;
-			  @media(max-width:$medium){height:30px;}
-
-					&:hover{
+              
+              &:hover{
 						opacity: 0.7;
 					}
               &.badge{
@@ -240,7 +226,6 @@ main{
                 color: white;
                 padding: 1%;
                 margin: 3px 0;
-                font-size: 1.3rem;
                 &.strong{background-color: $pink;}
                 &.medium{background-color: lighten($pink, 10);}
                 &.weak{background-color: lighten($pink, 20);}
@@ -337,13 +322,13 @@ main{
 			margin: 0;
             color: inherit;
             width: 100%;
-            border-top: 1px solid $project-border;
+          @media(min-width: 750px){border-top: 1px solid $project-border;}
           
             @media(min-width:750px){
                 display: table;
                 table-layout: fixed;
             }
-            & a:first-child div{border-left: 1px solid $project-border;}
+          & a:first-child div{ @media(min-width: 750px){border-left: 1px solid $project-border;}}
             a{
               display: block;
               color: inherit;
@@ -368,11 +353,11 @@ main{
               transition: background-position 500ms;
               position: relative;
               cursor: pointer;
-              border-right: 1px solid $project-border;
               @media(min-width: 750px){
                 background-position: 50% 50%;
                 background-size: cover;
                 overflow: hidden;
+                border-right: 1px solid $project-border;
               }
               
               .info{

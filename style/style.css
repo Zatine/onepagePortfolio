@@ -449,21 +449,6 @@ a, a:active, a:visited {
     a img:hover, a:active img:hover, a:visited img:hover {
       opacity: 0.7; }
 
-.nav-arrow {
-  background-image: url("../img/nav-arrow.png");
-  height: 15px;
-  width: 35px;
-  margin: 50px auto;
-  transition: opacity 200ms; }
-  .nav-arrow.top {
-    background-position: -35px; }
-  .nav-arrow.next-light {
-    background-position: -75px; }
-  .nav-arrow.top-light {
-    background-position: 35px; }
-  .nav-arrow:hover {
-    opacity: 0.5; }
-
 @media (min-width: 700px) {
   .left {
     float: left; } }
@@ -502,7 +487,7 @@ a, a:active, a:visited {
   .hidden-mobile {
     display: none; } }
 
-@media (max-width: 1100px) {
+@media (max-width: 992px) {
   .hidden-medium {
     display: none; } }
 
@@ -573,47 +558,62 @@ a, a:active, a:visited {
 
 header {
   width: 100%;
-  position: relative;
   text-align: center;
-  padding-top: 50px;
-  overflow: hidden; }
-  @media (max-width: 700px) {
+  overflow: hidden;
+  height: 165px;
+  background-color: #E0E0E0; }
+  @media (min-width: 700px) {
     header {
-      max-height: 500px;
-      min-height: 0; } }
+      height: 205px; } }
+  @media (min-width: 992px) {
+    header {
+      height: 315px; } }
   header #header-text {
-    position: relative;
-    top: 10%; }
+    background-color: #60BFDF;
+    transform: rotate(4deg);
+    width: 140%;
+    margin-left: -20%;
+    height: 150px;
+    padding: 40px; }
+    @media (min-width: 992px) {
+      header #header-text {
+        height: 250px; } }
     header #header-text h1 {
       margin: 0;
       font-family: "Nothing You Could Do", sans-serif;
-      font-size: 4em;
-      color: #393939; }
-      @media (max-width: 700px) {
+      font-size: 1.5em;
+      color: #f0f0f0; }
+      @media (min-width: 430px) {
         header #header-text h1 {
-          font-size: 2em; } }
-      @media (max-width: 1100px) and (min-width: 700px) {
+          font-size: 2.2em; } }
+      @media (min-width: 700px) {
         header #header-text h1 {
           font-size: 2.7em; } }
+      @media (min-width: 992px) {
+        header #header-text h1 {
+          font-size: 4em; } }
     header #header-text h2 {
-      margin: -30px 0 0 0;
+      margin: -10px 0 0 0;
       font-weight: 300;
-      font-size: 2.5em; }
-      @media (max-width: 700px) {
+      font-size: 1.1em;
+      color: #f0f0f0; }
+      @media (min-width: 430px) {
         header #header-text h2 {
-          font-size: 1.2em;
-          margin-top: 0; } }
-      @media (max-width: 1100px) and (min-width: 700px) {
+          font-size: 1.5em;
+          margin-top: -20px; } }
+      @media (min-width: 700px) {
         header #header-text h2 {
-          font-size: 1.8em;
-          margin-top: 0; } }
+          font-size: 1.8em; } }
+      @media (min-width: 992px) {
+        header #header-text h2 {
+          font-size: 2.5em; } }
   header nav {
     padding: 20px 0;
     font-size: 1.2em; }
     @media (max-width: 700px) {
       header nav {
         display: none; } }
-    @media (max-width: 1100px) and (min-width: 700px) {
+    @media (max-width: 992px) and (min-width: 700px) {
       header nav {
         font-size: 1em;
         margin-top: 0; } }
@@ -638,7 +638,8 @@ main h3 {
   margin: 0px; }
   @media (max-width: 700px) {
     main h3 {
-      font-size: 1.7em; } }
+      font-size: 1.7em;
+      text-align: center; } }
 main h4 {
   font-size: 2em;
   font-family: "Nothing You Could Do", sans-serif;
@@ -653,7 +654,7 @@ main #about h4 {
   font-size: 2em;
   font-weight: bold;
   margin-top: 50px; }
-  @media (max-width: 1100px) {
+  @media (max-width: 992px) {
     main #about h4 {
       font-size: 1.5em; } }
 main #about img {
@@ -668,11 +669,9 @@ main #about .four.columns p {
       font-size: 1em; } }
 main #about .skills {
   text-align: center; }
-  main #about .skills h4 {
-    height: 40px; }
-    @media (max-width: 1100px) {
-      main #about .skills h4 {
-        height: 30px; } }
+  @media (max-width: 992px) {
+    main #about .skills h4 {
+      height: 30px; } }
   main #about .skills .skill-icons {
     background-image: url("../img/skill_icons.png");
     height: 135px;
@@ -689,36 +688,29 @@ main #about .skills {
     text-align: left;
     list-style: none;
     padding: 0;
-    max-width: 375px;
     margin: 0 auto; }
     @media (max-width: 700px) {
       main #about .skills ul {
-        font-size: 1.5em; } }
-    @media (max-width: 1100px) {
+        font-size: 1.5em;
+        text-align: center; } }
+    @media (max-width: 992px) {
       main #about .skills ul {
         font-size: 1em; } }
-    main #about .skills ul li {
-      overflow: hidden;
-      height: 40px; }
-      @media (max-width: 1100px) {
-        main #about .skills ul li {
-          height: 30px; } }
-      main #about .skills ul li:hover {
-        opacity: 0.7; }
-      main #about .skills ul li.badge {
-        background-color: #6f6f6f;
-        display: inline-block;
-        border-radius: 10px;
-        color: white;
-        padding: 1%;
-        margin: 3px 0;
-        font-size: 1.3rem; }
-        main #about .skills ul li.badge.strong {
-          background-color: #eb386f; }
-        main #about .skills ul li.badge.medium {
-          background-color: #f06691; }
-        main #about .skills ul li.badge.weak {
-          background-color: #f495b2; }
+    main #about .skills ul li:hover {
+      opacity: 0.7; }
+    main #about .skills ul li.badge {
+      background-color: #6f6f6f;
+      display: inline-block;
+      border-radius: 10px;
+      color: white;
+      padding: 1%;
+      margin: 3px 0; }
+      main #about .skills ul li.badge.strong {
+        background-color: #eb386f; }
+      main #about .skills ul li.badge.medium {
+        background-color: #f06691; }
+      main #about .skills ul li.badge.weak {
+        background-color: #f495b2; }
     main #about .skills ul .pink-skill, main #about .skills ul .blue-skill {
       display: inline-block;
       float: right;
@@ -804,14 +796,17 @@ main #projects .projects {
   position: relative;
   margin: 0;
   color: inherit;
-  width: 100%;
-  border-top: 1px solid #919394; }
+  width: 100%; }
+  @media (min-width: 750px) {
+    main #projects .projects {
+      border-top: 1px solid #919394; } }
   @media (min-width: 750px) {
     main #projects .projects {
       display: table;
       table-layout: fixed; } }
-  main #projects .projects a:first-child div {
-    border-left: 1px solid #919394; }
+  @media (min-width: 750px) {
+    main #projects .projects a:first-child div {
+      border-left: 1px solid #919394; } }
   main #projects .projects a {
     display: block;
     color: inherit;
@@ -832,13 +827,13 @@ main #projects .projects {
       background-repeat: no-repeat;
       transition: background-position 500ms;
       position: relative;
-      cursor: pointer;
-      border-right: 1px solid #919394; }
+      cursor: pointer; }
       @media (min-width: 750px) {
         main #projects .projects a > div {
           background-position: 50% 50%;
           background-size: cover;
-          overflow: hidden; } }
+          overflow: hidden;
+          border-right: 1px solid #919394; } }
       main #projects .projects a > div .info {
         background-color: rgba(28, 28, 28, 0.95);
         color: #aaa;
