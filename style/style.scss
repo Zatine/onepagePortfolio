@@ -9,7 +9,7 @@
 html{
 	height: 100%;
   font-size: 22px;
-  @media(max-width:$mobile){font-size:22px;}
+  @media(min-width:$mobile){font-size:22px;}
 
 }
 
@@ -40,22 +40,6 @@ a, a:active, a:visited{
 	}
 }
 
-.left{@media(min-width:$mobile){float:left;}}
-.right{@media(min-width:$mobile){float:right;}}
-.left-align{text-align:left;}
-.right-align{text-align:right;}
-.center-align{text-align:center;}
-.clear{content:"";
-	   display:table;
-	   clear:both;}
-
-.hidden{display: none;}
-.show-block{display: block;}
-.show-ib{display:inline-block;}
-.show-inline{display:inline;}
-.hidden-mobile{@media(max-width:$mobile){display:none;}}
-.hidden-medium{@media(max-width:$medium){display:none;}}
-
 .sub-title{
   font-size: 1.1em;
   font-weight: 600;
@@ -65,15 +49,6 @@ a, a:active, a:visited{
 }
 .blue{
   color: $blue;
-}
-.quicksilver{
-  font-family: $text-font;
-}
-
-.bottom{
-		position: absolute;
-		bottom: 5%;
-		width: 100%;
 }
 
 $projects: 'fof' 'tp' 'rhythm' 'pmenu' 'vintage' 'snake';
@@ -85,19 +60,6 @@ $projects: 'fof' 'tp' 'rhythm' 'pmenu' 'vintage' 'snake';
           background-image: url("../img/projects/#{$item}_anim.gif");
         }
     }
-}
-
-.header-image{
-	background-image: url('../img/header.jpg');
-	background-size: cover;
-	background-position: top;
-  	@media(max-width:$mobile){
-	  background-size:140%
-	}
-  	@media(max-width:400px){
-	  background-size:330%
-	}
-
 }
 
 header{
@@ -136,7 +98,8 @@ header{
 			}
 	nav{
       padding: 20px 0;
-	  @media(max-width:$mobile){display:none;}
+      display: none;
+	  @media(min-width:$mobile){display:block;}
 		font-size: 1.2em;
 		  @media(max-width:$medium) and(min-width:$mobile){font-size:1em; margin-top:0;}
 		ul{
@@ -149,7 +112,6 @@ header{
 				
 				a, a:active, a:visited{
 					transition: color 500ms;
-					-webkit-transition: color 300ms;
 					color: #7c7c7c;
 					&:hover{color: lighten(#909090, 10);}
 
@@ -162,63 +124,46 @@ header{
 
 
 main{
-	h3{	font-size: 2em;
-	  @media(max-width:$mobile){font-size:1.7em; text-align: center;}
-		text-align: left;
-        border-bottom: 1px solid darken($bg-color, 10);
-		margin: 0px;}
-	h4{	font-size: 2em;
-	  @media(max-width:$mobile){font-size:2em;}
-		font-family: $header-font;
-		margin: 0;}
+	h3{	
+      text-align: center;
+      font-size: 2em;
+      border-bottom: 1px solid darken($bg-color, 10);
+      margin: 0px;
+	  @media(min-width:$mobile){font-size:1.7em; text-align: left;}  
+  }
+	h4{	
+      font-size: 2em;
+      font-family: $header-font;
+      margin: 0;
+  }
 	
 	section{
-	  		@media(max-width:$mobile){padding: 20px 0;}
+      padding: 20px 0;
+	  @media(min-width:$mobile){padding: 0;}
 	}
 
   	#about{
-	  h4{font-size: 2em; font-weight:bold; margin-top:50px;
-	  	@media(max-width:$medium){font-size: 1.5em;}}
-
       img{
           max-width: 80%;
           @media(min-width:$mobile){max-width: 100%;}
       }
                 
-      .four.columns p{
+      p{
         font-size: 0.8em;
         @media(min-width: $mobile){font-size: 1em;}
       }
       
 	  .skills{
-			h4{
-			  @media(max-width:$medium){height:30px;}
-			}
-			text-align: center;
-			.skill-icons{
-			  background-image: url('../img/skill_icons.png');
-			  height: 135px;
-			  width:135px;
-			  margin: 0 auto;
-			}
-			#art-icon{background-position: 0 0;}
-			#code-icon{background-position: 270px 0;}
-			#other-icon{background-position: 135px 0;}
-
-			  ul{
-			font-size: 1.5em;
-				@media(max-width:$mobile){font-size:1.5em; text-align: center;}
-				@media(max-width:$medium){font-size:1em;}
-			text-align: left;
+        
+		ul{
+			font-size: 1em;
+            text-align: center;
+			@media(min-width:$medium){font-size: 1.5em; text-align: left;}
 			list-style: none;
 			padding: 0;
 			margin: 0 auto;
 
 			li{
-              
-              &:hover{
-						opacity: 0.7;
-					}
               &.badge{
                 background-color: #6f6f6f;
                 display: inline-block;
@@ -231,80 +176,13 @@ main{
                 &.weak{background-color: lighten($pink, 20);}
               }
 			}
-
-			.pink-skill, .blue-skill{display:inline-block; float:right; height: 90%; text-indent: -999rem;}
-			.pink-skill{background-color:$pink;}
-			.blue-skill{background-color:$blue;}
-			.level1{width:10%;}
-			.level2{width:20%;}
-			.level3{width:30%;}
-			.level4{width:40%;}
-			.level5{width:50%;}
-		  }
 	  }
-		
-		.experience{
-			h4{margin-top: 0;}
-			h5{
-				font-size:1em;
-			  @media(max-width:$mobile){font-size:1em;}
-				display: inline;
-				padding: 0px 10px;
-				margin: 20px 0 0 0;
-			}
-		  @media(max-width:$mobile){font-size:0.8em;}
-			ul{
-				list-style:none;
-				padding: 0;
-				
-				li{
-					cursor: pointer; cursor: hand;
-					width: 85%;
-                    padding-top: 2%;
-					margin: 0 auto;
-					background: darken($bg-color, 10);
-					
-					&:nth-child(even){
-						background: $bg-color;
-					}
-				
-					p{
-						margin: 20px 0 0 0;
-						padding: 0 10px;
-					}
-					
-					&:hover{
-						.seeMoreButton{
-							opacity: 1;
-						}
-					}
-					.seeMoreButton{
-						width: 100%;
-						margin: 0;
-						padding: 0;
-						color: darken($bg-color, 30);
-						opacity: 0;
-						transition: opacity 200ms;
-					}
-					.seeMore{
-						background: $bg-color;
-						color: $text-color;
-						transition: max-height 1s;
-						text-align: left;
-						margin: 0;
-						overflow: hidden;
-					}
-					.hide{max-height:0;}
-					.show{max-height: 200px; height:auto; @media(max-width:$mobile){max-height:300px;}}
-				}
-				
-			}
-		}
 	  
-	}
+      }
+  }
 
 	#projects{
-      h3{margin-bottom:50px;}
+      
       .container > p{
         background-color: darken($bg-color, 10);
         color: lighten($text-color, 40);
@@ -313,27 +191,23 @@ main{
         padding: 1%;
       }
       
-		.row{
-			margin: 0 auto;
-		}
-		
 		.projects{
 			position:relative;
 			margin: 0;
             color: inherit;
             width: 100%;
-          @media(min-width: 750px){border-top: 1px solid $project-border;}
+            @media(min-width: $mobile){border-top: 1px solid $project-border;}
           
-            @media(min-width:750px){
+            @media(min-width:$mobile){
                 display: table;
                 table-layout: fixed;
             }
-          & a:first-child div{ @media(min-width: 750px){border-left: 1px solid $project-border;}}
+          & a:first-child div{ @media(min-width: $mobile){border-left: 1px solid $project-border;}}
             a{
               display: block;
               color: inherit;
               height: 350px;
-              @media(min-width:750px){
+              @media(min-width:$mobile){
                 height: 350px;
                 display: table-cell;
                 margin: 0;
@@ -406,6 +280,7 @@ main{
 	  	
 	}
 	#contact{
+      text-align: center;
 	  .contact-icon{
 		background-image: url('../img/contact_icons.png');
 		height: 100px;

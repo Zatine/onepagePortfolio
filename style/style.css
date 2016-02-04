@@ -424,7 +424,7 @@ th {
 html {
   height: 100%;
   font-size: 22px; }
-  @media (max-width: 700px) {
+  @media (min-width: 700px) {
     html {
       font-size: 22px; } }
 
@@ -449,48 +449,6 @@ a, a:active, a:visited {
     a img:hover, a:active img:hover, a:visited img:hover {
       opacity: 0.7; }
 
-@media (min-width: 700px) {
-  .left {
-    float: left; } }
-
-@media (min-width: 700px) {
-  .right {
-    float: right; } }
-
-.left-align {
-  text-align: left; }
-
-.right-align {
-  text-align: right; }
-
-.center-align {
-  text-align: center; }
-
-.clear {
-  content: "";
-  display: table;
-  clear: both; }
-
-.hidden {
-  display: none; }
-
-.show-block {
-  display: block; }
-
-.show-ib {
-  display: inline-block; }
-
-.show-inline {
-  display: inline; }
-
-@media (max-width: 700px) {
-  .hidden-mobile {
-    display: none; } }
-
-@media (max-width: 992px) {
-  .hidden-medium {
-    display: none; } }
-
 .sub-title {
   font-size: 1.1em;
   font-weight: 600; }
@@ -500,14 +458,6 @@ a, a:active, a:visited {
 
 .blue {
   color: #5cbfdf; }
-
-.quicksilver {
-  font-family: "Quicksand", sans-serif; }
-
-.bottom {
-  position: absolute;
-  bottom: 5%;
-  width: 100%; }
 
 .fof {
   background-image: url("../img/projects/fof_still.gif");
@@ -544,17 +494,6 @@ a, a:active, a:visited {
   transition: background-image 500ms; }
   .snake:hover {
     background-image: url("../img/projects/snake_anim.gif"); }
-
-.header-image {
-  background-image: url("../img/header.jpg");
-  background-size: cover;
-  background-position: top; }
-  @media (max-width: 700px) {
-    .header-image {
-      background-size: 140%; } }
-  @media (max-width: 400px) {
-    .header-image {
-      background-size: 330%; } }
 
 header {
   width: 100%;
@@ -609,10 +548,11 @@ header {
           font-size: 2.5em; } }
   header nav {
     padding: 20px 0;
+    display: none;
     font-size: 1.2em; }
-    @media (max-width: 700px) {
+    @media (min-width: 700px) {
       header nav {
-        display: none; } }
+        display: block; } }
     @media (max-width: 992px) and (min-width: 700px) {
       header nav {
         font-size: 1em;
@@ -626,192 +566,87 @@ header {
         display: inline-block; }
         header nav ul li a, header nav ul li a:active, header nav ul li a:visited {
           transition: color 500ms;
-          -webkit-transition: color 300ms;
           color: #7c7c7c; }
           header nav ul li a:hover, header nav ul li a:active:hover, header nav ul li a:visited:hover {
             color: #aaaaaa; }
 
 main h3 {
+  text-align: center;
   font-size: 2em;
-  text-align: left;
   border-bottom: 1px solid #d7d7d7;
   margin: 0px; }
-  @media (max-width: 700px) {
+  @media (min-width: 700px) {
     main h3 {
       font-size: 1.7em;
-      text-align: center; } }
+      text-align: left; } }
 main h4 {
   font-size: 2em;
   font-family: "Nothing You Could Do", sans-serif;
   margin: 0; }
-  @media (max-width: 700px) {
-    main h4 {
-      font-size: 2em; } }
-@media (max-width: 700px) {
-  main section {
-    padding: 20px 0; } }
-main #about h4 {
-  font-size: 2em;
-  font-weight: bold;
-  margin-top: 50px; }
-  @media (max-width: 992px) {
-    main #about h4 {
-      font-size: 1.5em; } }
+main section {
+  padding: 20px 0; }
+  @media (min-width: 700px) {
+    main section {
+      padding: 0; } }
 main #about img {
   max-width: 80%; }
   @media (min-width: 700px) {
     main #about img {
       max-width: 100%; } }
-main #about .four.columns p {
+main #about p {
   font-size: 0.8em; }
   @media (min-width: 700px) {
-    main #about .four.columns p {
+    main #about p {
       font-size: 1em; } }
-main #about .skills {
-  text-align: center; }
-  @media (max-width: 992px) {
-    main #about .skills h4 {
-      height: 30px; } }
-  main #about .skills .skill-icons {
-    background-image: url("../img/skill_icons.png");
-    height: 135px;
-    width: 135px;
-    margin: 0 auto; }
-  main #about .skills #art-icon {
-    background-position: 0 0; }
-  main #about .skills #code-icon {
-    background-position: 270px 0; }
-  main #about .skills #other-icon {
-    background-position: 135px 0; }
-  main #about .skills ul {
-    font-size: 1.5em;
-    text-align: left;
-    list-style: none;
-    padding: 0;
-    margin: 0 auto; }
-    @media (max-width: 700px) {
-      main #about .skills ul {
-        font-size: 1.5em;
-        text-align: center; } }
-    @media (max-width: 992px) {
-      main #about .skills ul {
-        font-size: 1em; } }
-    main #about .skills ul li:hover {
-      opacity: 0.7; }
-    main #about .skills ul li.badge {
-      background-color: #6f6f6f;
-      display: inline-block;
-      border-radius: 10px;
-      color: white;
-      padding: 1%;
-      margin: 3px 0; }
-      main #about .skills ul li.badge.strong {
-        background-color: #eb386f; }
-      main #about .skills ul li.badge.medium {
-        background-color: #f06691; }
-      main #about .skills ul li.badge.weak {
-        background-color: #f495b2; }
-    main #about .skills ul .pink-skill, main #about .skills ul .blue-skill {
-      display: inline-block;
-      float: right;
-      height: 90%;
-      text-indent: -999rem; }
-    main #about .skills ul .pink-skill {
-      background-color: #eb386f; }
-    main #about .skills ul .blue-skill {
-      background-color: #5cbfdf; }
-    main #about .skills ul .level1 {
-      width: 10%; }
-    main #about .skills ul .level2 {
-      width: 20%; }
-    main #about .skills ul .level3 {
-      width: 30%; }
-    main #about .skills ul .level4 {
-      width: 40%; }
-    main #about .skills ul .level5 {
-      width: 50%; }
-main #about .experience h4 {
-  margin-top: 0; }
-main #about .experience h5 {
+main #about .skills ul {
   font-size: 1em;
-  display: inline;
-  padding: 0px 10px;
-  margin: 20px 0 0 0; }
-  @media (max-width: 700px) {
-    main #about .experience h5 {
-      font-size: 1em; } }
-@media (max-width: 700px) {
-  main #about .experience {
-    font-size: 0.8em; } }
-main #about .experience ul {
+  text-align: center;
   list-style: none;
-  padding: 0; }
-  main #about .experience ul li {
-    cursor: pointer;
-    cursor: hand;
-    width: 85%;
-    padding-top: 2%;
-    margin: 0 auto;
-    background: #d7d7d7; }
-    main #about .experience ul li:nth-child(even) {
-      background: #f0f0f0; }
-    main #about .experience ul li p {
-      margin: 20px 0 0 0;
-      padding: 0 10px; }
-    main #about .experience ul li:hover .seeMoreButton {
-      opacity: 1; }
-    main #about .experience ul li .seeMoreButton {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      color: #a4a4a4;
-      opacity: 0;
-      transition: opacity 200ms; }
-    main #about .experience ul li .seeMore {
-      background: #f0f0f0;
-      color: #121212;
-      transition: max-height 1s;
-      text-align: left;
-      margin: 0;
-      overflow: hidden; }
-    main #about .experience ul li .hide {
-      max-height: 0; }
-    main #about .experience ul li .show {
-      max-height: 200px;
-      height: auto; }
-      @media (max-width: 700px) {
-        main #about .experience ul li .show {
-          max-height: 300px; } }
-main #projects h3 {
-  margin-bottom: 50px; }
+  padding: 0;
+  margin: 0 auto; }
+  @media (min-width: 992px) {
+    main #about .skills ul {
+      font-size: 1.5em;
+      text-align: left; } }
+  main #about .skills ul li.badge {
+    background-color: #6f6f6f;
+    display: inline-block;
+    border-radius: 10px;
+    color: white;
+    padding: 1%;
+    margin: 3px 0; }
+    main #about .skills ul li.badge.strong {
+      background-color: #eb386f; }
+    main #about .skills ul li.badge.medium {
+      background-color: #f06691; }
+    main #about .skills ul li.badge.weak {
+      background-color: #f495b2; }
 main #projects .container > p {
   background-color: #d7d7d7;
   color: #787878;
   margin: 0;
   text-align: center;
   padding: 1%; }
-main #projects .row {
-  margin: 0 auto; }
 main #projects .projects {
   position: relative;
   margin: 0;
   color: inherit;
   width: 100%; }
-  @media (min-width: 750px) {
+  @media (min-width: 700px) {
     main #projects .projects {
       border-top: 1px solid #919394; } }
-  @media (min-width: 750px) {
+  @media (min-width: 700px) {
     main #projects .projects {
       display: table;
       table-layout: fixed; } }
-  @media (min-width: 750px) {
+  @media (min-width: 700px) {
     main #projects .projects a:first-child div {
       border-left: 1px solid #919394; } }
   main #projects .projects a {
     display: block;
     color: inherit;
     height: 350px; }
-    @media (min-width: 750px) {
+    @media (min-width: 700px) {
       main #projects .projects a {
         height: 350px;
         display: table-cell;
@@ -868,21 +703,23 @@ main #projects .projects {
           content: " ";
           opacity: 0.3;
           transition: opacity 500ms; } }
-main #contact .contact-icon {
-  background-image: url("../img/contact_icons.png");
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
-  display: inline-block;
-  transition: opacity 300ms; }
-  main #contact .contact-icon:hover {
-    opacity: 0.7; }
-  main #contact .contact-icon.mail {
-    background-position: 0px; }
-  main #contact .contact-icon.git {
-    background-position: 100px; }
-  main #contact .contact-icon.li {
-    background-position: 200px; }
+main #contact {
+  text-align: center; }
+  main #contact .contact-icon {
+    background-image: url("../img/contact_icons.png");
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    display: inline-block;
+    transition: opacity 300ms; }
+    main #contact .contact-icon:hover {
+      opacity: 0.7; }
+    main #contact .contact-icon.mail {
+      background-position: 0px; }
+    main #contact .contact-icon.git {
+      background-position: 100px; }
+    main #contact .contact-icon.li {
+      background-position: 200px; }
 
 footer {
   color: #b7b7b7;
