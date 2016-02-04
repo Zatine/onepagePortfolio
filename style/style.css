@@ -430,8 +430,8 @@ html {
 
 body {
   font-family: "Quicksand", sans-serif;
-  color: #1a1a1a;
-  background: #E6E6E6;
+  color: #121212;
+  background: #f0f0f0;
   height: 100%; }
 
 h2, h3 {
@@ -572,12 +572,10 @@ a, a:active, a:visited {
       background-size: 330%; } }
 
 header {
-  background: #aaa;
   width: 100%;
   position: relative;
   text-align: center;
-  height: 100%;
-  min-height: 950px;
+  padding-top: 50px;
   overflow: hidden; }
   @media (max-width: 700px) {
     header {
@@ -610,6 +608,7 @@ header {
           font-size: 1.8em;
           margin-top: 0; } }
   header nav {
+    padding: 20px 0;
     font-size: 1.2em; }
     @media (max-width: 700px) {
       header nav {
@@ -620,21 +619,23 @@ header {
         margin-top: 0; } }
     header nav ul {
       list-style: none;
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
       header nav ul li {
         padding: 0 20px;
         display: inline-block; }
         header nav ul li a, header nav ul li a:active, header nav ul li a:visited {
           transition: color 500ms;
           -webkit-transition: color 300ms;
-          color: #cbcbcb; }
+          color: #7c7c7c; }
           header nav ul li a:hover, header nav ul li a:active:hover, header nav ul li a:visited:hover {
-            color: #e5e5e5; }
+            color: #aaaaaa; }
 
 main h3 {
-  font-size: 3em;
-  text-align: center;
-  margin-top: 0px; }
+  font-size: 2em;
+  text-align: left;
+  border-bottom: 1px solid #d7d7d7;
+  margin: 0px; }
   @media (max-width: 700px) {
     main h3 {
       font-size: 1.7em; } }
@@ -645,12 +646,9 @@ main h4 {
   @media (max-width: 700px) {
     main h4 {
       font-size: 2em; } }
-main section {
-  padding: 50px 0 0 0;
-  box-shadow: inset rgba(198, 198, 198, 0.69) 0px 10px 30px; }
-  @media (max-width: 700px) {
-    main section {
-      padding: 20px 0; } }
+@media (max-width: 700px) {
+  main section {
+    padding: 20px 0; } }
 main #about h4 {
   font-size: 2em;
   font-weight: bold;
@@ -692,7 +690,7 @@ main #about .skills {
     list-style: none;
     padding: 0;
     max-width: 375px;
-    margin: 50px auto; }
+    margin: 0 auto; }
     @media (max-width: 700px) {
       main #about .skills ul {
         font-size: 1.5em; } }
@@ -707,6 +705,20 @@ main #about .skills {
           height: 30px; } }
       main #about .skills ul li:hover {
         opacity: 0.7; }
+      main #about .skills ul li.badge {
+        background-color: #6f6f6f;
+        display: inline-block;
+        border-radius: 10px;
+        color: white;
+        padding: 1%;
+        margin: 3px 0;
+        font-size: 1.3rem; }
+        main #about .skills ul li.badge.strong {
+          background-color: #eb386f; }
+        main #about .skills ul li.badge.medium {
+          background-color: #f06691; }
+        main #about .skills ul li.badge.weak {
+          background-color: #f495b2; }
     main #about .skills ul .pink-skill, main #about .skills ul .blue-skill {
       display: inline-block;
       float: right;
@@ -748,9 +760,9 @@ main #about .experience ul {
     width: 85%;
     padding-top: 2%;
     margin: 0 auto;
-    background: #cdcdcd; }
+    background: #d7d7d7; }
     main #about .experience ul li:nth-child(even) {
-      background: #E6E6E6; }
+      background: #f0f0f0; }
     main #about .experience ul li p {
       margin: 20px 0 0 0;
       padding: 0 10px; }
@@ -760,12 +772,12 @@ main #about .experience ul {
       width: 100%;
       margin: 0;
       padding: 0;
-      color: #9a9a9a;
+      color: #a4a4a4;
       opacity: 0;
       transition: opacity 200ms; }
     main #about .experience ul li .seeMore {
-      background: #E6E6E6;
-      color: #1a1a1a;
+      background: #f0f0f0;
+      color: #121212;
       transition: max-height 1s;
       text-align: left;
       margin: 0;
@@ -778,89 +790,89 @@ main #about .experience ul {
       @media (max-width: 700px) {
         main #about .experience ul li .show {
           max-height: 300px; } }
-main #projects {
-  background: #ABCAD5;
-  box-shadow: inset #A7C4CE 0px 10px 30px;
-  overflow: auto; }
-  main #projects .container {
-    width: 100%;
-    max-width: 100%; }
-  main #projects .row {
-    margin: 0 auto; }
-  main #projects .projects {
-    position: relative;
-    margin: 0;
+main #projects h3 {
+  margin-bottom: 50px; }
+main #projects .container > p {
+  background-color: #d7d7d7;
+  color: #787878;
+  margin: 0;
+  text-align: center;
+  padding: 1%; }
+main #projects .row {
+  margin: 0 auto; }
+main #projects .projects {
+  position: relative;
+  margin: 0;
+  color: inherit;
+  width: 100%;
+  border-top: 1px solid #919394; }
+  @media (min-width: 750px) {
+    main #projects .projects {
+      display: table;
+      table-layout: fixed; } }
+  main #projects .projects a:first-child div {
+    border-left: 1px solid #919394; }
+  main #projects .projects a {
+    display: block;
     color: inherit;
-    width: 100%;
-    border-bottom: 1px solid #919394; }
-    main #projects .projects:first-child {
-      border-top: 1px solid #919394; }
+    height: 350px; }
     @media (min-width: 750px) {
-      main #projects .projects {
-        display: table;
-        table-layout: fixed; } }
-    main #projects .projects a {
-      display: block;
-      color: inherit;
-      height: 300px;
-      margin-bottom: 20px; }
+      main #projects .projects a {
+        height: 350px;
+        display: table-cell;
+        margin: 0; } }
+    main #projects .projects a:last-child > div {
+      border-right: none; }
+    main #projects .projects a > div {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background-color: #f0f0f0;
+      background-position: 50% 0%;
+      background-repeat: no-repeat;
+      transition: background-position 500ms;
+      position: relative;
+      cursor: pointer;
+      border-right: 1px solid #919394; }
       @media (min-width: 750px) {
-        main #projects .projects a {
-          height: 350px;
-          display: table-cell;
-          margin: 0; } }
-      main #projects .projects a:last-child > div {
-        border-right: none; }
-      main #projects .projects a > div {
+        main #projects .projects a > div {
+          background-position: 50% 50%;
+          background-size: cover;
+          overflow: hidden; } }
+      main #projects .projects a > div .info {
+        background-color: rgba(28, 28, 28, 0.95);
+        color: #aaa;
         width: 100%;
-        height: 100%;
-        margin: 0;
-        background-color: #E6E6E6;
-        background-position: 50% 0%;
-        background-repeat: no-repeat;
-        transition: background-position 500ms;
-        position: relative;
-        cursor: pointer;
-        border-right: 1px solid #919394; }
+        position: absolute;
+        bottom: 0%;
+        padding: 1%;
+        font-size: 0.8em; }
         @media (min-width: 750px) {
-          main #projects .projects a > div {
-            background-position: 50% 50%;
-            background-size: cover;
-            overflow: hidden; } }
-        main #projects .projects a > div .info {
-          background-color: rgba(28, 28, 28, 0.95);
-          color: #aaa;
+          main #projects .projects a > div .info {
+            bottom: -100%;
+            -webkit-transition: bottom 500ms;
+            -moz-transition: bottom 500ms;
+            -o-transition: bottom 500ms;
+            transition: bottom 500ms; } }
+        main #projects .projects a > div .info p {
+          margin: 0; }
+      main #projects .projects a > div:hover .info {
+        bottom: 0; }
+      main #projects .projects a > div:hover:before {
+        opacity: 0; }
+      @media (min-width: 750px) {
+        main #projects .projects a > div:before {
+          display: block;
+          height: 100%;
           width: 100%;
+          background-color: #000;
           position: absolute;
-          bottom: 0%;
-          padding: 1%;
-          font-size: 0.8em; }
-          @media (min-width: 750px) {
-            main #projects .projects a > div .info {
-              bottom: -100%;
-              -webkit-transition: bottom 500ms;
-              -moz-transition: bottom 500ms;
-              -o-transition: bottom 500ms;
-              transition: bottom 500ms; } }
-          main #projects .projects a > div .info p {
-            margin: 0; }
-        main #projects .projects a > div:hover .info {
-          bottom: 0; }
-        main #projects .projects a > div:hover:before {
-          opacity: 0; }
-        @media (min-width: 750px) {
-          main #projects .projects a > div:before {
-            display: block;
-            height: 100%;
-            width: 100%;
-            background-color: #000;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 2;
-            content: " ";
-            opacity: 0.3;
-            transition: opacity 500ms; } }
+          top: 0;
+          left: 0;
+          z-index: 2;
+          content: " ";
+          opacity: 0.3;
+          transition: opacity 500ms; } }
 main #contact .contact-icon {
   background-image: url("../img/contact_icons.png");
   height: 100px;
@@ -878,9 +890,9 @@ main #contact .contact-icon {
     background-position: 200px; }
 
 footer {
-  color: #868686;
+  color: #b7b7b7;
   text-align: center; }
   footer p {
-    margin: 0; }
+    margin: 15px 0; }
 
 /*# sourceMappingURL=style.css.map */

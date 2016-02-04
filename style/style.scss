@@ -116,12 +116,13 @@ $projects: 'fof' 'tp' 'rhythm' 'pmenu' 'vintage' 'snake';
 }
 
 header{
-	background: #aaa;
+	//background: #aaa;
 	width: 100%;
 	position: relative;
 	text-align: center;
-	height: 100%;
-	min-height: 950px;
+    padding-top: 50px;
+	//height: 100%;
+	//min-height: 950px;
   @media(max-width:$mobile){max-height: 500px; min-height: 0;}
 	overflow: hidden;
 	
@@ -143,12 +144,14 @@ header{
 			}
 			}
 	nav{
+      padding: 20px 0;
 	  @media(max-width:$mobile){display:none;}
 		font-size: 1.2em;
 		  @media(max-width:$medium) and(min-width:$mobile){font-size:1em; margin-top:0;}
 		ul{
 			list-style: none;
 			padding: 0;
+            margin: 0;
 			li{
 				padding: 0 20px;
 				display: inline-block;
@@ -156,8 +159,8 @@ header{
 				a, a:active, a:visited{
 					transition: color 500ms;
 					-webkit-transition: color 300ms;
-					color: #cbcbcb;
-					&:hover{color: lighten(#cbcbcb, 10);}
+					color: #7c7c7c;
+					&:hover{color: lighten(#909090, 10);}
 
 				}
 			}
@@ -168,18 +171,18 @@ header{
 
 
 main{
-	h3{	font-size: 3em;
+	h3{	font-size: 2em;
 	  @media(max-width:$mobile){font-size:1.7em;}
-		text-align: center;
-		margin-top: 0px;}
+		text-align: left;
+        border-bottom: 1px solid darken($bg-color, 10);
+		margin: 0px;}
 	h4{	font-size: 2em;
 	  @media(max-width:$mobile){font-size:2em;}
 		font-family: $header-font;
 		margin: 0;}
 	
-	section{padding: 50px 0 0 0;
+	section{
 	  		@media(max-width:$mobile){padding: 20px 0;}
-			box-shadow: inset rgba(198, 198, 198, 0.69) 0px 10px 30px;
 	}
 
   	#about{
@@ -220,7 +223,7 @@ main{
 			list-style: none;
 			padding: 0;
 			max-width: 375px;
-			margin: 50px auto;
+			margin: 0 auto;
 
 			li{
 				overflow: hidden; 
@@ -230,6 +233,18 @@ main{
 					&:hover{
 						opacity: 0.7;
 					}
+              &.badge{
+                background-color: #6f6f6f;
+                display: inline-block;
+                border-radius: 10px;
+                color: white;
+                padding: 1%;
+                margin: 3px 0;
+                font-size: 1.3rem;
+                &.strong{background-color: $pink;}
+                &.medium{background-color: lighten($pink, 10);}
+                &.weak{background-color: lighten($pink, 20);}
+              }
 			}
 
 			.pink-skill, .blue-skill{display:inline-block; float:right; height: 90%; text-indent: -999rem;}
@@ -304,10 +319,14 @@ main{
 	}
 
 	#projects{
-		background: #ABCAD5;
-	  	box-shadow: inset #A7C4CE 0px 10px 30px;
-	  	overflow: auto;
-      .container{width: 100%; max-width: 100%;}
+      h3{margin-bottom:50px;}
+      .container > p{
+        background-color: darken($bg-color, 10);
+        color: lighten($text-color, 40);
+        margin: 0;
+        text-align: center;
+        padding: 1%;
+      }
       
 		.row{
 			margin: 0 auto;
@@ -318,20 +337,17 @@ main{
 			margin: 0;
             color: inherit;
             width: 100%;
-            border-bottom: 1px solid #919394;
-            &:first-child{
-              border-top: 1px solid #919394;
-            }
+            border-top: 1px solid $project-border;
           
             @media(min-width:750px){
                 display: table;
                 table-layout: fixed;
             }
+            & a:first-child div{border-left: 1px solid $project-border;}
             a{
               display: block;
               color: inherit;
-              height: 300px;
-              margin-bottom: 20px;
+              height: 350px;
               @media(min-width:750px){
                 height: 350px;
                 display: table-cell;
@@ -352,7 +368,7 @@ main{
               transition: background-position 500ms;
               position: relative;
               cursor: pointer;
-              border-right: 1px solid #919394;
+              border-right: 1px solid $project-border;
               @media(min-width: 750px){
                 background-position: 50% 50%;
                 background-size: cover;
@@ -431,9 +447,9 @@ main{
 }
 
 footer{
-	color: #868686;
+	color: #b7b7b7;
 	text-align: center;
   p{
-	margin: 0;
+	margin: 15px 0;
   }
 }
