@@ -453,9 +453,8 @@ a, a:active, a:visited {
   background-image: url("../img/nav-arrow.png");
   height: 15px;
   width: 35px;
-  margin: 0 auto;
-  transition: opacity 200ms;
-  -webkit-transition: opacity 200ms; }
+  margin: 50px auto;
+  transition: opacity 200ms; }
   .nav-arrow.top {
     background-position: -35px; }
   .nav-arrow.next-light {
@@ -517,13 +516,49 @@ a, a:active, a:visited {
 .blue {
   color: #5cbfdf; }
 
-.quicksand {
+.quicksilver {
   font-family: "Quicksand", sans-serif; }
 
 .bottom {
   position: absolute;
   bottom: 5%;
   width: 100%; }
+
+.fof {
+  background-image: url("../img/projects/fof_still.gif");
+  transition: background-image 500ms; }
+  .fof:hover {
+    background-image: url("../img/projects/fof_anim.gif"); }
+
+.tp {
+  background-image: url("../img/projects/tp_still.gif");
+  transition: background-image 500ms; }
+  .tp:hover {
+    background-image: url("../img/projects/tp_anim.gif"); }
+
+.rhythm {
+  background-image: url("../img/projects/rhythm_still.gif");
+  transition: background-image 500ms; }
+  .rhythm:hover {
+    background-image: url("../img/projects/rhythm_anim.gif"); }
+
+.pmenu {
+  background-image: url("../img/projects/pmenu_still.gif");
+  transition: background-image 500ms; }
+  .pmenu:hover {
+    background-image: url("../img/projects/pmenu_anim.gif"); }
+
+.vintage {
+  background-image: url("../img/projects/vintage_still.gif");
+  transition: background-image 500ms; }
+  .vintage:hover {
+    background-image: url("../img/projects/vintage_anim.gif"); }
+
+.snake {
+  background-image: url("../img/projects/snake_still.gif");
+  transition: background-image 500ms; }
+  .snake:hover {
+    background-image: url("../img/projects/snake_anim.gif"); }
 
 .header-image {
   background-image: url("../img/header.jpg");
@@ -611,7 +646,7 @@ main h4 {
     main h4 {
       font-size: 2em; } }
 main section {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   box-shadow: inset rgba(198, 198, 198, 0.69) 0px 10px 30px; }
   @media (max-width: 700px) {
     main section {
@@ -758,12 +793,12 @@ main #projects {
     color: inherit;
     width: 100%;
     border-bottom: 1px solid #919394; }
+    main #projects .projects:first-child {
+      border-top: 1px solid #919394; }
     @media (min-width: 750px) {
       main #projects .projects {
         display: table;
         table-layout: fixed; } }
-    main #projects .projects:first-child {
-      border-top: 1px solid #919394; }
     main #projects .projects a {
       display: block;
       color: inherit;
@@ -771,7 +806,7 @@ main #projects {
       margin-bottom: 20px; }
       @media (min-width: 750px) {
         main #projects .projects a {
-          height: 240px;
+          height: 350px;
           display: table-cell;
           margin: 0; } }
       main #projects .projects a:last-child > div {
@@ -783,9 +818,6 @@ main #projects {
         background-color: #E6E6E6;
         background-position: 50% 0%;
         background-repeat: no-repeat;
-        -webkit-transition: background-position 500ms;
-        -moz-transition: background-position 500ms;
-        -o-transition: background-position 500ms;
         transition: background-position 500ms;
         position: relative;
         cursor: pointer;
@@ -828,39 +860,26 @@ main #projects {
             z-index: 2;
             content: " ";
             opacity: 0.3;
-            -webkit-transition: opacity 500ms;
-            -moz-transition: opacity 500ms;
-            -o-transition: opacity 500ms;
             transition: opacity 500ms; } }
-        main #projects .projects a > div.snake {
-          background-image: url("../img/projects/snake.png"); }
-        main #projects .projects a > div.pmenu {
-          background-image: url("../img/projects/photomenu.jpg"); }
-        main #projects .projects a > div.vintage {
-          background-image: url("../img/projects/vintage.png"); }
-        main #projects .projects a > div.tp {
-          background-image: url("../img/projects/tp.png"); }
-        main #projects .projects a > div.rhythm {
-          background-image: url("../img/projects/rhythm.jpg"); }
 main #contact .contact-icon {
   background-image: url("../img/contact_icons.png");
   height: 100px;
   width: 100px;
   margin: 0 auto;
   display: inline-block;
-  transition: opacity 300ms;
-  -webkit-transition: opacity 200ms; }
+  transition: opacity 300ms; }
   main #contact .contact-icon:hover {
     opacity: 0.7; }
-main #contact .git {
-  background-position: 100px; }
-main #contact .li {
-  background-position: 200px; }
+  main #contact .contact-icon.mail {
+    background-position: 0px; }
+  main #contact .contact-icon.git {
+    background-position: 100px; }
+  main #contact .contact-icon.li {
+    background-position: 200px; }
 
 footer {
   color: #868686;
-  text-align: center;
-  background: #e1e1e1; }
+  text-align: center; }
   footer p {
     margin: 0; }
 

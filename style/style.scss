@@ -43,9 +43,8 @@ a, a:active, a:visited{
 .nav-arrow{background-image:url('../img/nav-arrow.png');
 			height:15px;
   			width: 35px;
-  			margin: 0 auto;
+  			margin: 50px auto;
   			transition: opacity 200ms;
-  			-webkit-transition: opacity 200ms;
   	&.top{background-position: -35px;}
   	&.next-light{background-position: -75px;}
   	&.top-light{background-position: 35px;}
@@ -81,7 +80,7 @@ a, a:active, a:visited{
 .blue{
   color: $blue;
 }
-.quicksand{
+.quicksilver{
   font-family: $text-font;
 }
 
@@ -89,6 +88,17 @@ a, a:active, a:visited{
 		position: absolute;
 		bottom: 5%;
 		width: 100%;
+}
+
+$projects: 'fof' 'tp' 'rhythm' 'pmenu' 'vintage' 'snake';
+@each $item in $projects {
+    .#{$item}{
+        background-image: url("../img/projects/#{$item}_still.gif");
+        transition: background-image 500ms;
+        &:hover{
+          background-image: url("../img/projects/#{$item}_anim.gif");
+        }
+    }
 }
 
 .header-image{
@@ -167,7 +177,7 @@ main{
 		font-family: $header-font;
 		margin: 0;}
 	
-	section{padding: 50px 0;
+	section{padding: 50px 0 0 0;
 	  		@media(max-width:$mobile){padding: 20px 0;}
 			box-shadow: inset rgba(198, 198, 198, 0.69) 0px 10px 30px;
 	}
@@ -308,13 +318,14 @@ main{
 			margin: 0;
             color: inherit;
             width: 100%;
-            @media(min-width:750px){
-                display: table;
-                table-layout: fixed;
-            }
             border-bottom: 1px solid #919394;
             &:first-child{
               border-top: 1px solid #919394;
+            }
+          
+            @media(min-width:750px){
+                display: table;
+                table-layout: fixed;
             }
             a{
               display: block;
@@ -322,7 +333,7 @@ main{
               height: 300px;
               margin-bottom: 20px;
               @media(min-width:750px){
-                height: 240px;
+                height: 350px;
                 display: table-cell;
                 margin: 0;
               }
@@ -338,9 +349,6 @@ main{
               background-color: $bg-color;
               background-position: 50% 0%;
               background-repeat: no-repeat;
-              -webkit-transition: background-position 500ms;
-              -moz-transition: background-position 500ms;
-              -o-transition: background-position 500ms;
               transition: background-position 500ms;
               position: relative;
               cursor: pointer;
@@ -387,27 +395,8 @@ main{
                   z-index: 2;
                   content: " ";
                   opacity: 0.3;
-                  -webkit-transition: opacity 500ms;
-                  -moz-transition: opacity 500ms;
-                  -o-transition: opacity 500ms;
                   transition: opacity 500ms;
                 }
-              }
-                            
-              &.snake{
-                background-image: url('../img/projects/snake.png');
-              }
-              &.pmenu{
-                background-image: url('../img/projects/photomenu.jpg');
-              }
-              &.vintage{
-                background-image: url('../img/projects/vintage.png');
-              }
-              &.tp{
-                background-image: url('../img/projects/tp.png');
-              }
-              &.rhythm{
-                background-image: url('../img/projects/rhythm.jpg');
               }
             }
           }
@@ -423,19 +412,20 @@ main{
 		margin: 0 auto;
 		display:inline-block;
 		transition: opacity 300ms;
-		-webkit-transition: opacity 200ms;
 
 		&:hover {
 			opacity: 0.7;
 		}
-	  }
-	  .mail {
-	  }
-	  .git {
-	  	background-position: 100px;
-	  }
-	  .li {
-	  	background-position: 200px;
+        
+        &.mail {
+          background-position: 0px;
+        }
+        &.git {
+          background-position: 100px;
+        }
+        &.li {
+          background-position: 200px;
+        }
 	  }
 	}
 }
@@ -443,7 +433,6 @@ main{
 footer{
 	color: #868686;
 	text-align: center;
-  	background: rgb(225, 225, 225);
   p{
 	margin: 0;
   }
